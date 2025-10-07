@@ -69,7 +69,6 @@ public class PlayerMovement : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
         jumpsRestants = jumpsMax;
         movementScript = GetComponent<PlayerMovement>();
-        mainCam = Camera.main;
         jumpsRestants = jumpsMax;
         timeActualSprint = timeSprint;
         runsRemaining = runMax; // Initializes the number of times you can run
@@ -176,7 +175,6 @@ public class PlayerMovement : MonoBehaviour
         if (horizontalInput != 0)
         {
             // Convert mouse position to world coordinates
-            mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
 
             // Calculate rotation towards mouse position
             Vector2 direction = mousePos - transform.position;

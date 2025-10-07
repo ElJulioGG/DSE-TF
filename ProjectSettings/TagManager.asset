@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Background
+  - ShowcaseCamera
   layers:
   - Default
   - TransparentFX
@@ -55,6 +57,9 @@ TagManager:
     locked: 0
   - name: Plat 3
     uniqueID: 3922484003
+    locked: 0
+  - name: Things
+    uniqueID: 4002524789
     locked: 0
   - name: Enemy
     uniqueID: 3744857297
