@@ -26,10 +26,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float damageDelay; //seconds before player can be damaged again
 
     // Coin related variables
-    [Header("Projectile")]
+    [Header("Projectile Settings")]
     [SerializeField] private GameObject ballPrefab;
     [SerializeField] public List<GameObject> ballArray;
-    
+    [SerializeField] private float shotDelay = 0.5f;//segundso
+    [SerializeField] private float shotTimer;
+
     // Sprint related variables
     [Header("Sprint Settings")]
     public float timeSprint;
@@ -173,7 +175,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleFire()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && shotTimer <= 0)
         {
             ballArray.Add(Instantiate(ballPrefab, this.transform.position, Quaternion.identity));
 
@@ -182,32 +184,29 @@ public class PlayerMovement : MonoBehaviour
                 ballArray[0].GetComponent<BallScript>().Explode();
                 ballArray.RemoveAt(0);
             }
-
+            shotTimer = shotDelay;
         }
 
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
-            //Debug.Log(ballArray.Count);
-
-            List<int> toDelete = new List<int>(); ;
-
-            for (int i = 0; i < ballArray.Count; i++)
-            {
-                var bs = ballArray[i].GetComponent<BallScript>();
-                if (bs.canDet == true)
+            if (ballArray.Count <= 2) { 
+            
+                foreach(GameObject  ball in ballArray)
                 {
+                    var bs = ball.GetComponent<BallScript>();
                     bs.Explode();
-                    toDelete.Add(i);
                 }
+                ballArray.Clear();
+                return;
             }
-
-            foreach (int aaa in toDelete)
-            {
-                Debug.Log(aaa);
-                ballArray.RemoveAt(aaa);
-            }
-        
         }
+        if (shotTimer > 0)
+        {
+            shotTimer -= Time.deltaTime;
+        }
+        
+
+
     }
 
     private void HandleMouseDirection()
