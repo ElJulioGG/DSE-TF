@@ -129,8 +129,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5039e0801b70808e5a7f4fd15749d162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ExplosionObject: {fileID: 1089624342767190682, guid: 4f8153c26a79efb4daf66527f2c27aee, type: 3}
   detTime: 0
   canDet: 0
+  stuck: 0
 --- !u!58 &467286040186424380
 CircleCollider2D:
   m_ObjectHideFlags: 0
