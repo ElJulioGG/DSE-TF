@@ -26,10 +26,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float damageDelay; //seconds before player can be damaged again
 
     // Coin related variables
-    [Header("Coin Settings")]
-    //[SerializeField] private TMP_Text coinCounter;
-    private int coinNum = 0;
-
+    [Header("Projectile")]
+    [SerializeField] private GameObject ballPrefab;
+    [SerializeField] public List<GameObject> ballArray;
+    
     // Sprint related variables
     [Header("Sprint Settings")]
     public float timeSprint;
@@ -54,6 +54,8 @@ public class PlayerMovement : MonoBehaviour
     private new BoxCollider2D boxCollider;
     private new Rigidbody2D rigidbody;
     public Animator playerAnimator;
+
+    
 
     private void Start()
     {
@@ -83,6 +85,7 @@ public class PlayerMovement : MonoBehaviour
             HandleMovement();
             HandleJump();
             HandleRun();
+            HandleFire();
         }
 
         if (IsOnGround())
@@ -146,7 +149,6 @@ public class PlayerMovement : MonoBehaviour
         }
         if (IsOnGround())
         {
-            Debug.Log("LAND ANIMATION");
             playerAnimator.SetBool("GROUNDED", true);
         }
 
@@ -167,6 +169,45 @@ public class PlayerMovement : MonoBehaviour
 
         previousYPosition = currentYPosition;
 
+    }
+
+    private void HandleFire()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            ballArray.Add(Instantiate(ballPrefab, this.transform.position, Quaternion.identity));
+
+            if (ballArray.Count > 2)
+            {
+                ballArray[0].GetComponent<BallScript>().Explode();
+                ballArray.RemoveAt(0);
+            }
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            //Debug.Log(ballArray.Count);
+
+            List<int> toDelete = new List<int>(); ;
+
+            for (int i = 0; i < ballArray.Count; i++)
+            {
+                var bs = ballArray[i].GetComponent<BallScript>();
+                if (bs.canDet == true)
+                {
+                    bs.Explode();
+                    toDelete.Add(i);
+                }
+            }
+
+            foreach (int aaa in toDelete)
+            {
+                Debug.Log(aaa);
+                ballArray.RemoveAt(aaa);
+            }
+        
+        }
     }
 
     private void HandleMouseDirection()
