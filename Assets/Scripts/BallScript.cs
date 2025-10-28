@@ -38,7 +38,7 @@ public class BallScript : MonoBehaviour
     public void Explode()
     {
         //holy shit Run or Explode referencia
-       // Instantiate(ExplosionObject, transform.position, Quaternion.identity);
+        Instantiate(ExplosionObject, transform.position, Quaternion.identity);
         Destroy(gameObject,0.1f);
     }
 
