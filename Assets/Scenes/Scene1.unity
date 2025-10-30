@@ -594,7 +594,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 0000000059c4822bb998f2b4
+  m_ApplyToSortingLayers: 0000000059c4822bb998f2b40f826df5
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -1200,6 +1200,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 797901900034470033, guid: a57840d814cae6d9da4e664931a0a2b1, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 797901900034470033, guid: a57840d814cae6d9da4e664931a0a2b1, type: 3}
+      propertyPath: m_GravityScale
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 797901900034470033, guid: a57840d814cae6d9da4e664931a0a2b1, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1540437149571541099, guid: a57840d814cae6d9da4e664931a0a2b1, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1209,6 +1221,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1738542845053590892, guid: a57840d814cae6d9da4e664931a0a2b1, type: 3}
+      propertyPath: forceJump
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738542845053590892, guid: a57840d814cae6d9da4e664931a0a2b1, type: 3}
       propertyPath: shotDelay
       value: 0.5
       objectReference: {fileID: 0}
@@ -1216,6 +1232,22 @@ PrefabInstance:
       propertyPath: ballPrefab
       value: 
       objectReference: {fileID: 1383389015142929110, guid: 0b37eec417f0bcd948434639b9b96055, type: 3}
+    - target: {fileID: 1738542845053590892, guid: a57840d814cae6d9da4e664931a0a2b1, type: 3}
+      propertyPath: velocidadAir
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738542845053590892, guid: a57840d814cae6d9da4e664931a0a2b1, type: 3}
+      propertyPath: fallMultiplier
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738542845053590892, guid: a57840d814cae6d9da4e664931a0a2b1, type: 3}
+      propertyPath: velocidadActual
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738542845053590892, guid: a57840d814cae6d9da4e664931a0a2b1, type: 3}
+      propertyPath: velocidadGround
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3911747117668431156, guid: a57840d814cae6d9da4e664931a0a2b1, type: 3}
       propertyPath: m_Layer
       value: 6

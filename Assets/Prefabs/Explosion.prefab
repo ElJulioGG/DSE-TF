@@ -45,13 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 423204c772a314747a8e88c37891dfd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotDelay: 0.5
-  shotTimer: 0
-  explosionForce: 10
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 0
+  explosionForce: 30
+  explosionRadius: 3
   explosionEffect: {fileID: 0}
+  lifetime: 0.5
 --- !u!58 &5657217348203583181
 CircleCollider2D:
   m_ObjectHideFlags: 0

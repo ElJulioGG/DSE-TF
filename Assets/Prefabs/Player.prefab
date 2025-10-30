@@ -176,19 +176,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df355dabe4d042245acd8a8b1d29457b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 5
-  velocityMoventBase: 5
-  velocityExtra: 5
+  velocidadActual: 5
+  velocidadGround: 5
+  velocidadAir: 10
   forceJump: 5
   jumpsMax: 1
   MaskFloor:
     serializedVersion: 2
     m_Bits: 8
+  fallMultiplier: 2.5
   health: 11
   damageDelay: 1
-  timeSprint: 11
-  runMax: 11
-  timeBetweenSprint: 11
+  ballPrefab: {fileID: 0}
+  ballArray: []
+  shotDelay: 0.5
+  shotTimer: 0
   playerAnimator: {fileID: 6118074606278952375}
 --- !u!1 &3911747117668431156
 GameObject:
