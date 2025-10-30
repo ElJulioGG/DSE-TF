@@ -1238,7 +1238,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1738542845053590892, guid: a57840d814cae6d9da4e664931a0a2b1, type: 3}
       propertyPath: fallMultiplier
-      value: 3.5
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738542845053590892, guid: a57840d814cae6d9da4e664931a0a2b1, type: 3}
+      propertyPath: airAcceleration
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1738542845053590892, guid: a57840d814cae6d9da4e664931a0a2b1, type: 3}
       propertyPath: velocidadActual

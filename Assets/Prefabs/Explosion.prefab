@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 423204c772a314747a8e88c37891dfd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionForce: 30
-  explosionRadius: 3
+  explosionForce: 15
+  explosionRadius: 2
   explosionEffect: {fileID: 0}
   lifetime: 0.5
 --- !u!58 &5657217348203583181

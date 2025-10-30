@@ -4,7 +4,7 @@ public class Explosion : MonoBehaviour
 {
     [Header("Explosion Settings")]
     [SerializeField] private float explosionForce = 10f;
-    [SerializeField] private float explosionRadius = 3f;
+    [SerializeField] public float explosionRadius = 3f;
     [SerializeField] private GameObject explosionEffect;
     [SerializeField] private float lifetime = 0.5f;
 
@@ -27,30 +27,42 @@ public class Explosion : MonoBehaviour
 
     void Explode()
     {
-        // Optional explosion VFX
         if (explosionEffect != null)
         {
             Instantiate(explosionEffect, transform.position, Quaternion.identity);
         }
 
-        // Detect ALL objects with colliders in the explosion radius
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius);
 
         foreach (Collider2D col in colliders)
         {
-            Rigidbody2D rb = col.attachedRigidbody;
-            if (rb != null)
-            {
-                // Calculate push direction
-                Vector2 direction = (rb.position - (Vector2)transform.position).normalized;
+            if (col.CompareTag("Projectile"))
+                continue;
 
-                // Apply force
-                rb.AddForce(direction * explosionForce, ForceMode2D.Impulse);
-            }
+            Rigidbody2D rb = col.attachedRigidbody;
+            if (rb == null) continue;
+
+            // Cancel downward momentum before explosion force
+            if (rb.linearVelocity.y < 0)
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
+
+            // Direction from explosion center to object
+            Vector2 direction = (rb.position - (Vector2)transform.position).normalized;
+
+            // Distance from explosion center
+            float distance = Vector2.Distance(rb.position, transform.position);
+
+            // --- Distance-based force scaling ---
+            // At center -> 100% force
+            // At edge -> 50% force
+            float t = Mathf.Clamp01(distance / explosionRadius);  // 0 = center, 1 = edge
+            float forceMultiplier = Mathf.Lerp(1f, 0.75f, t);
+
+            // Apply explosion impulse
+            rb.AddForce(direction * explosionForce * forceMultiplier, ForceMode2D.Impulse);
         }
     }
 
-    // Draw the explosion radius in the Scene view for debugging
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;

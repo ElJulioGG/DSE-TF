@@ -5,6 +5,7 @@ public class BallScript : MonoBehaviour
     private Rigidbody2D rbody;
     private Camera mainCam;
     [SerializeField] GameObject ExplosionObject;
+    [SerializeField] GameObject RangeSprite;
 
     public float detTime = 0;
     public bool canDet = false;
@@ -38,7 +39,9 @@ public class BallScript : MonoBehaviour
     public void Explode()
     {
         //holy shit Run or Explode referencia
-        Instantiate(ExplosionObject, transform.position, Quaternion.identity);
+        GameObject obj = Instantiate(ExplosionObject, transform.position, Quaternion.identity);
+        float RangeRadius = obj.GetComponent<Explosion>().explosionRadius;
+        RangeSprite.transform.localScale = new Vector3(RangeRadius*2, RangeRadius * 2, RangeRadius * 2);
         Destroy(gameObject,0.1f);
     }
 
