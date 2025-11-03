@@ -40,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject ballPrefab;
     [SerializeField] public List<GameObject> ballArray;
     [SerializeField] private float shotDelay = 0.5f;
+    [SerializeField] private GameObject firePoint;
     private float shotTimer;
 
     private bool WatchRight = true;
@@ -110,7 +111,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0) && shotTimer <= 0)
         {
-            ballArray.Add(Instantiate(ballPrefab, this.transform.position, Quaternion.identity));
+            ballArray.Add(Instantiate(ballPrefab, firePoint.transform.position, Quaternion.identity));
             if (ballArray.Count > 2)
             {
                 ballArray[0].GetComponent<BallScript>()?.Explode();
