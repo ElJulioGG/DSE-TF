@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     private int jumpsRestants;
     private bool wasOnGround;
 
+
     [Header("Fall Settings")]
     [Tooltip("Multiplier for gravity when falling to make jumps feel less floaty.")]
     [SerializeField] private float fallMultiplier = 2.5f;
@@ -43,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject firePoint;
     private float shotTimer;
 
-    private bool WatchRight = true;
+    public bool WatchRight = true;
     private new Rigidbody2D rigidbody;
     private new BoxCollider2D boxCollider;
     private Camera mainCam;
