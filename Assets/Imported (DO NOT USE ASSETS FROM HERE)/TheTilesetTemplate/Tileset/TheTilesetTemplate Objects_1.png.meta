@@ -1,0 +1,2042 @@
+fileFormatVersion: 2
+guid: 96839b2dd1596fc4b8312570715c7e10
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2615306631899822602
+    second: TheTilesetTemplate Objects_1_0
+  - first:
+      213: 5924735576265391932
+    second: TheTilesetTemplate Objects_1_1
+  - first:
+      213: -7695188030970204185
+    second: TheTilesetTemplate Objects_1_2
+  - first:
+      213: 7478901122917088344
+    second: TheTilesetTemplate Objects_1_3
+  - first:
+      213: 3277131901698422400
+    second: TheTilesetTemplate Objects_1_4
+  - first:
+      213: -5766623661755967939
+    second: TheTilesetTemplate Objects_1_5
+  - first:
+      213: -6198080590651650032
+    second: TheTilesetTemplate Objects_1_6
+  - first:
+      213: -5521143406485580324
+    second: TheTilesetTemplate Objects_1_7
+  - first:
+      213: 2229035671256544415
+    second: TheTilesetTemplate Objects_1_8
+  - first:
+      213: 8033154873775798493
+    second: TheTilesetTemplate Objects_1_9
+  - first:
+      213: -1189110576866740725
+    second: TheTilesetTemplate Objects_1_10
+  - first:
+      213: 6484041426583849183
+    second: TheTilesetTemplate Objects_1_11
+  - first:
+      213: -1735799161909900528
+    second: TheTilesetTemplate Objects_1_12
+  - first:
+      213: -8627066489876188392
+    second: TheTilesetTemplate Objects_1_13
+  - first:
+      213: 2439155703062480755
+    second: TheTilesetTemplate Objects_1_14
+  - first:
+      213: 3976368426595261183
+    second: TheTilesetTemplate Objects_1_15
+  - first:
+      213: -1819616298043034647
+    second: TheTilesetTemplate Objects_1_16
+  - first:
+      213: -750619873753689518
+    second: TheTilesetTemplate Objects_1_17
+  - first:
+      213: -5282868683079551566
+    second: TheTilesetTemplate Objects_1_18
+  - first:
+      213: -606317778578384346
+    second: TheTilesetTemplate Objects_1_19
+  - first:
+      213: 8597769374525463957
+    second: TheTilesetTemplate Objects_1_20
+  - first:
+      213: 8489050996953785426
+    second: TheTilesetTemplate Objects_1_21
+  - first:
+      213: -7316482626173033050
+    second: TheTilesetTemplate Objects_1_22
+  - first:
+      213: -5456292014088352527
+    second: TheTilesetTemplate Objects_1_23
+  - first:
+      213: 9056346726763923693
+    second: TheTilesetTemplate Objects_1_24
+  - first:
+      213: -4746857873705873161
+    second: TheTilesetTemplate Objects_1_25
+  - first:
+      213: -5238969043937194210
+    second: TheTilesetTemplate Objects_1_26
+  - first:
+      213: -4846973951435195954
+    second: TheTilesetTemplate Objects_1_27
+  - first:
+      213: 2455844931153563930
+    second: TheTilesetTemplate Objects_1_28
+  - first:
+      213: -6959372868439234282
+    second: TheTilesetTemplate Objects_1_29
+  - first:
+      213: -3097862788497359241
+    second: TheTilesetTemplate Objects_1_30
+  - first:
+      213: 1797410451252000693
+    second: TheTilesetTemplate Objects_1_31
+  - first:
+      213: 230528932163459808
+    second: TheTilesetTemplate Objects_1_32
+  - first:
+      213: -1819521619433902964
+    second: TheTilesetTemplate Objects_1_33
+  - first:
+      213: -2972869111263120792
+    second: TheTilesetTemplate Objects_1_34
+  - first:
+      213: 6494233912912990506
+    second: TheTilesetTemplate Objects_1_35
+  - first:
+      213: -2793744503632957563
+    second: TheTilesetTemplate Objects_1_36
+  - first:
+      213: -5992863981300875573
+    second: TheTilesetTemplate Objects_1_37
+  - first:
+      213: -3968188211094325372
+    second: TheTilesetTemplate Objects_1_38
+  - first:
+      213: -3211942220964594614
+    second: TheTilesetTemplate Objects_1_39
+  - first:
+      213: 5519249417110677457
+    second: TheTilesetTemplate Objects_1_40
+  - first:
+      213: 7503935013026696227
+    second: TheTilesetTemplate Objects_1_41
+  - first:
+      213: 7693205741658048727
+    second: TheTilesetTemplate Objects_1_42
+  - first:
+      213: -8846899274394956551
+    second: TheTilesetTemplate Objects_1_43
+  - first:
+      213: 4041718635284931512
+    second: TheTilesetTemplate Objects_1_44
+  - first:
+      213: 3593729821310651890
+    second: TheTilesetTemplate Objects_1_45
+  - first:
+      213: -1566798235016663715
+    second: TheTilesetTemplate Objects_1_46
+  - first:
+      213: -1880807232731595447
+    second: TheTilesetTemplate Objects_1_47
+  - first:
+      213: 6657647242296151209
+    second: TheTilesetTemplate Objects_1_48
+  - first:
+      213: 953568011227745239
+    second: TheTilesetTemplate Objects_1_49
+  - first:
+      213: -7938949403164170273
+    second: TheTilesetTemplate Objects_1_50
+  - first:
+      213: 1864881726226518247
+    second: TheTilesetTemplate Objects_1_51
+  - first:
+      213: 6119687021009794643
+    second: TheTilesetTemplate Objects_1_52
+  - first:
+      213: -665578936040072613
+    second: TheTilesetTemplate Objects_1_53
+  - first:
+      213: 1145344697524746921
+    second: TheTilesetTemplate Objects_1_54
+  - first:
+      213: 9075064680799875744
+    second: TheTilesetTemplate Objects_1_55
+  - first:
+      213: 3599458226190782160
+    second: TheTilesetTemplate Objects_1_56
+  - first:
+      213: 1472717441059798541
+    second: TheTilesetTemplate Objects_1_57
+  - first:
+      213: -8400546340301269994
+    second: TheTilesetTemplate Objects_1_58
+  - first:
+      213: -6417665976660347198
+    second: TheTilesetTemplate Objects_1_59
+  - first:
+      213: -6615164437031368138
+    second: TheTilesetTemplate Objects_1_60
+  - first:
+      213: -6844296744104261428
+    second: TheTilesetTemplate Objects_1_61
+  - first:
+      213: -7270691851930918394
+    second: TheTilesetTemplate Objects_1_62
+  - first:
+      213: -8114870373689843642
+    second: TheTilesetTemplate Objects_1_63
+  - first:
+      213: 2446530913163918739
+    second: TheTilesetTemplate Objects_1_64
+  - first:
+      213: 287094092085357458
+    second: TheTilesetTemplate Objects_1_65
+  - first:
+      213: 829006792582350063
+    second: TheTilesetTemplate Objects_1_66
+  - first:
+      213: -6476534923448888878
+    second: TheTilesetTemplate Objects_1_67
+  - first:
+      213: -1039427906209948563
+    second: TheTilesetTemplate Objects_1_68
+  - first:
+      213: -1277337217036124617
+    second: TheTilesetTemplate Objects_1_69
+  - first:
+      213: 2075953659110074045
+    second: TheTilesetTemplate Objects_1_70
+  - first:
+      213: 2752359640806748628
+    second: TheTilesetTemplate Objects_1_71
+  - first:
+      213: 4621707004606251035
+    second: TheTilesetTemplate Objects_1_72
+  - first:
+      213: 8909452992582289296
+    second: TheTilesetTemplate Objects_1_73
+  - first:
+      213: -8517662639180428003
+    second: TheTilesetTemplate Objects_1_74
+  - first:
+      213: 8319827704285991753
+    second: TheTilesetTemplate Objects_1_75
+  - first:
+      213: -838634417378028558
+    second: TheTilesetTemplate Objects_1_76
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_0
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 351
+        width: 162
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0abc15768f6b4420800000000000000
+      internalID: 2615306631899822602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_1
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 455
+        width: 32
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3ffa63bd93e83250800000000000000
+      internalID: 5924735576265391932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_2
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 415
+        width: 32
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7efee26b143353590800000000000000
+      internalID: -7695188030970204185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_3
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 415
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85c3eb542f46ac760800000000000000
+      internalID: 7478901122917088344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_4
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 415
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 086b5d20a16ba7d20800000000000000
+      internalID: 3277131901698422400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_5
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 415
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d365caf1556d8ffa0800000000000000
+      internalID: -5766623661755967939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_6
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 415
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01017f8aa8efbf9a0800000000000000
+      internalID: -6198080590651650032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_7
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 415
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd5df66f255f063b0800000000000000
+      internalID: -5521143406485580324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_8
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 415
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f94bbe012202fee10800000000000000
+      internalID: 2229035671256544415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_9
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 415
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd8ba15dbcf7b7f60800000000000000
+      internalID: 8033154873775798493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_10
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 383
+        width: 25
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b06b2330b3e6f7fe0800000000000000
+      internalID: -1189110576866740725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_11
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 383
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd88274d251fbf950800000000000000
+      internalID: 6484041426583849183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_12
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 383
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01b80f0ebd339e7e0800000000000000
+      internalID: -1735799161909900528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_13
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 383
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 813f0415cb0864880800000000000000
+      internalID: -8627066489876188392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_14
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 383
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37748e0503f99d120800000000000000
+      internalID: 2439155703062480755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_15
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 383
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffa1a4b2406ee2730800000000000000
+      internalID: 3976368426595261183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_16
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 383
+        width: 25
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e332af1e9c6fb6e0800000000000000
+      internalID: -1819616298043034647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_17
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 351
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2521097a3334595f0800000000000000
+      internalID: -750619873753689518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_18
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 351
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b5f10e2cea7fa6b0800000000000000
+      internalID: -5282868683079551566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_19
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 351
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62ad4da513de597f0800000000000000
+      internalID: -606317778578384346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_20
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 351
+        width: 29
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59d925571b9615770800000000000000
+      internalID: 8597769374525463957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_21
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 351
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2542b91a7ea2fc570800000000000000
+      internalID: 8489050996953785426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_22
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 351
+        width: 26
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a5a3add0d1a67a90800000000000000
+      internalID: -7316482626173033050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_23
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 319
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fc8675625b5744b0800000000000000
+      internalID: -5456292014088352527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_24
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 319
+        width: 24
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de8098b8d5b9ead70800000000000000
+      internalID: 9056346726763923693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_25
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 319
+        width: 23
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f0de7ee9e5cf1eb0800000000000000
+      internalID: -4746857873705873161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_26
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 319
+        width: 27
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1f0bda69617b47b0800000000000000
+      internalID: -5238969043937194210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_27
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 319
+        width: 21
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec9322d1fd61cbcb0800000000000000
+      internalID: -4846973951435195954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_28
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 319
+        width: 33
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a111ad804f9e41220800000000000000
+      internalID: 2455844931153563930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_29
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 319
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 619203d9f375b6f90800000000000000
+      internalID: -6959372868439234282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_30
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 319
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77eb6b0053e2205d0800000000000000
+      internalID: -3097862788497359241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_31
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 319
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b73376484fa1f810800000000000000
+      internalID: 1797410451252000693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_32
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 319
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ea9d08a7d0033300800000000000000
+      internalID: 230528932163459808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_33
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 319
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8caf743ab2cfb6e0800000000000000
+      internalID: -1819521619433902964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_34
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 319
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8623e635b4f3eb6d0800000000000000
+      internalID: -2972869111263120792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_35
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 319
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a21597bf557202a50800000000000000
+      internalID: 6494233912912990506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_36
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 319
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58fe1c30d20aa39d0800000000000000
+      internalID: -2793744503632957563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_37
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 287
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcef357e5f115dca0800000000000000
+      internalID: -5992863981300875573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_38
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 287
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48774dba8d92ee8c0800000000000000
+      internalID: -3968188211094325372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_39
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 287
+        width: 28
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4c73505193ec63d0800000000000000
+      internalID: -3211942220964594614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_40
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 287
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d7e9a54a10589c40800000000000000
+      internalID: 5519249417110677457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_41
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 287
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32c82150325532860800000000000000
+      internalID: 7503935013026696227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_42
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 287
+        width: 20
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d806879cd1c3ca60800000000000000
+      internalID: 7693205741658048727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_43
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 287
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fc070a9bff793580800000000000000
+      internalID: -8846899274394956551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_44
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 287
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b32c325fa1171830800000000000000
+      internalID: 4041718635284931512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_45
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 287
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fd03f96b3e7fd130800000000000000
+      internalID: 3593729821310651890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_46
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 287
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5d6f177e4d914ae0800000000000000
+      internalID: -1566798235016663715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_47
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 223
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94d3c0a69c706e5e0800000000000000
+      internalID: -1880807232731595447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_48
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 223
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9accbe4a4e6b46c50800000000000000
+      internalID: 6657647242296151209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_49
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 223
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dbc762dd01cb3d00800000000000000
+      internalID: 953568011227745239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_50
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 223
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd7a996849f23d190800000000000000
+      internalID: -7938949403164170273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_51
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 223
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e059d7ac0461e910800000000000000
+      internalID: 1864881726226518247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_52
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 223
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3567bdf0cee7de450800000000000000
+      internalID: 6119687021009794643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_53
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 223
+        width: 34
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5a595beb7363c6f0800000000000000
+      internalID: -665578936040072613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_54
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 223
+        width: 21
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aaf6512fe415ef00800000000000000
+      internalID: 1145344697524746921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_55
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 223
+        width: 15
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a235c4de3b11fd70800000000000000
+      internalID: 9075064680799875744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_56
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 223
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0de85fb9f28d3f130800000000000000
+      internalID: 3599458226190782160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_57
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 223
+        width: 27
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0e34e8b5b4207410800000000000000
+      internalID: 1472717441059798541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_58
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 159
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 614922b8c934b6b80800000000000000
+      internalID: -8400546340301269994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_59
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 159
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c6bc06ebcedfe6a0800000000000000
+      internalID: -6417665976660347198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_60
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 159
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63ac2ff3ef63234a0800000000000000
+      internalID: -6615164437031368138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_61
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 159
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc88d46bf5c2401a0800000000000000
+      internalID: -6844296744104261428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_62
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 159
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 602a45e4840591b90800000000000000
+      internalID: -7270691851930918394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_63
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 159
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64020e9b360326f80800000000000000
+      internalID: -8114870373689843642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_64
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 159
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39db52b37e2d3f120800000000000000
+      internalID: 2446530913163918739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_65
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 95
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29b6cdf3e86fbf300800000000000000
+      internalID: 287094092085357458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_66
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 95
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe4c14c1949318b00800000000000000
+      internalID: 829006792582350063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_67
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 95
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d1da602dc9be16a0800000000000000
+      internalID: -6476534923448888878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_68
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 95
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6c5ab093d53391f0800000000000000
+      internalID: -1039427906209948563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_69
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 95
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73efc28919cf54ee0800000000000000
+      internalID: -1277337217036124617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_70
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 95
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db6ad65aad44fcc10800000000000000
+      internalID: 2075953659110074045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_71
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 95
+        width: 33
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d1786cb288523620800000000000000
+      internalID: 2752359640806748628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_72
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 31
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b108d79a80a932040800000000000000
+      internalID: 4621707004606251035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_73
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 31
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09788edda4cb4ab70800000000000000
+      internalID: 8909452992582289296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_74
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 31
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1dc80b45fe2bc980800000000000000
+      internalID: -8517662639180428003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_75
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 31
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9439b6a7737f57370800000000000000
+      internalID: 8319827704285991753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheTilesetTemplate Objects_1_76
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 31
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f314cfc0729c54f0800000000000000
+      internalID: -838634417378028558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
