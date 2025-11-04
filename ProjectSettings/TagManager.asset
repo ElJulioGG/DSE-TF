@@ -4,8 +4,7 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Background
-  - ShowcaseCamera
+  - Projectile
   layers:
   - Default
   - TransparentFX
@@ -13,8 +12,8 @@ TagManager:
   - Floor
   - Water
   - UI
-  - 
-  - 
+  - Player
+  - Projectile
   - 
   - 
   - 
@@ -67,8 +66,8 @@ TagManager:
   - name: Player
     uniqueID: 3035797689
     locked: 0
-  - name: Floor
-    uniqueID: 729990233
+  - name: Balls
+    uniqueID: 4117594639
     locked: 0
   m_RenderingLayers:
   - Default
