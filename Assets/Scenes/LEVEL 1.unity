@@ -9752,6 +9752,7 @@ GameObject:
   m_Component:
   - component: {fileID: 291195127}
   - component: {fileID: 291195126}
+  - component: {fileID: 291195128}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -9832,6 +9833,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1762002991}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &291195128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291195125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f98c43b1c7b8b504c9f7b27a18bcf050, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BackgroundFollowCamera
+  cameraTag: ShowcaseCamera
 --- !u!1 &403800588
 GameObject:
   m_ObjectHideFlags: 0
@@ -10183,8 +10197,8 @@ Transform:
   m_GameObject: {fileID: 519785708}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: 0.7071068, w: -0.7071068}
-  m_LocalPosition: {x: 0.185, y: 0.075, z: -0.020019893}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.252, y: 0.075, z: -0.020019893}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 845442083}
@@ -33530,7 +33544,7 @@ GameObject:
   - component: {fileID: 1365224858}
   m_Layer: 0
   m_Name: CinemachineCamera
-  m_TagString: Untagged
+  m_TagString: ShowcaseCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48607,7 +48621,7 @@ Transform:
   m_GameObject: {fileID: 1842852509}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.097, y: -0.529, z: 0}
+  m_LocalPosition: {x: 0.097, y: -0.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -49136,6 +49150,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2110098482}
   - component: {fileID: 2110098483}
+  - component: {fileID: 2110098484}
   m_Layer: 0
   m_Name: Background
   m_TagString: Background
@@ -49216,6 +49231,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2110098484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110098481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f98c43b1c7b8b504c9f7b27a18bcf050, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BackgroundFollowCamera
+  cameraTag: ShowcaseCamera
 --- !u!1 &2120308817
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ TagManager:
   - CurrentCheckpoint
   - Checkpoint
   - Obstacle
+  - ShowcaseCamera
   layers:
   - Default
   - TransparentFX
