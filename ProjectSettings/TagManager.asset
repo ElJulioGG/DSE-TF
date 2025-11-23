@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 3
   tags:
   - Projectile
+  - Background
+  - Enemy
+  - CurrentCheckpoint
+  - Checkpoint
+  - Obstacle
   layers:
   - Default
   - TransparentFX
@@ -14,8 +19,8 @@ TagManager:
   - UI
   - Player
   - Projectile
-  - 
-  - 
+  - Enemy
+  - Obstacle
   - 
   - 
   - 
@@ -68,6 +73,9 @@ TagManager:
     locked: 0
   - name: Balls
     uniqueID: 4117594639
+    locked: 0
+  - name: Floor
+    uniqueID: 729990233
     locked: 0
   m_RenderingLayers:
   - Default
