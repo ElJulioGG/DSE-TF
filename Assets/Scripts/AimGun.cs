@@ -29,6 +29,15 @@ public class AimGun : MonoBehaviour
         }
     }
 
+    //public void SetAimDirection(Vector2 dir)
+    //{
+    //    if (dir.sqrMagnitude > 0.1f)
+    //    {
+    //        aimDirection = dir.normalized;
+    //        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+    //        transform.rotation = Quaternion.Euler(0, 0, angle);
+    //    }
+    //}
     public void SetAimDirection(Vector2 dir)
     {
         if (dir.sqrMagnitude > 0.1f)
@@ -36,6 +45,11 @@ public class AimGun : MonoBehaviour
             aimDirection = dir.normalized;
             float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.Euler(0, 0, angle);
+
+            Vector3 scale = transform.localScale;
+            scale.y = dir.x < 0 ? -Mathf.Abs(scale.y) : Mathf.Abs(scale.y);
+            transform.localScale = scale;
         }
     }
+
 }
