@@ -22,7 +22,7 @@ TagManager:
   - Projectile
   - Enemy
   - Obstacle
-  - 
+  - Border
   - 
   - 
   - 
@@ -79,7 +79,7 @@ TagManager:
     uniqueID: 729990233
     locked: 0
   - name: UI
-    uniqueID: 4206219981
+    uniqueID: 3755708545
     locked: 0
   m_RenderingLayers:
   - Default

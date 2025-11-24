@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BasicEnemyMove : MonoBehaviour
+public class SpikeEnemyMove : MonoBehaviour
 {
     [SerializeField] private float speedX;
 
@@ -9,13 +9,13 @@ public class BasicEnemyMove : MonoBehaviour
     private Animator animator;
     private Rigidbody2D body;
     private SpriteRenderer sprite;
+    private bool isAlmostDeath;
     private bool isDeath;
     public float deathDuration = 2f;
     private int platformLayer;
     private int borderLayer;
     private int enemyLayer;
     private bool canMove = true;
-
 
     private void Awake()
     {
@@ -53,11 +53,29 @@ public class BasicEnemyMove : MonoBehaviour
         body.linearVelocityX = speedX;
         sprite.flipX = speedX < 0 ? true : false;
     }
-    public void Death()
+    public void PreDeath()
     {
         canMove = false;
+        isAlmostDeath = true;
+        animator.SetBool("Pain", isAlmostDeath);
+
+        float t = 0f;
+
+        while (t < deathDuration)
+        {
+            t += Time.deltaTime;
+        }
+
+        animator.SetBool("isAlmostDeath", isAlmostDeath);
+
+    }
+
+    private void Death()
+    {
+
         isDeath = true;
         animator.SetBool("isDeath", isDeath);
+
         Physics2D.IgnoreLayerCollision(enemyLayer, platformLayer, true);
         Physics2D.IgnoreLayerCollision(enemyLayer, borderLayer, true);
 
@@ -67,8 +85,8 @@ public class BasicEnemyMove : MonoBehaviour
         {
             t += Time.deltaTime;
         }
-        
 
-        Destroy(gameObject, 2f); 
+
+        Destroy(gameObject, 2f);
     }
 }
