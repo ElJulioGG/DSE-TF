@@ -1,0 +1,672 @@
+fileFormatVersion: 2
+guid: db454c5b62fa90c4fa40534d3acfa49e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1750814773290613205
+    second: Explosion2Stolen_0
+  - first:
+      213: -6504585981518182907
+    second: Explosion2Stolen_1
+  - first:
+      213: 1687396314960243933
+    second: Explosion2Stolen_2
+  - first:
+      213: 8762313816390296038
+    second: Explosion2Stolen_3
+  - first:
+      213: -2006196515585280085
+    second: Explosion2Stolen_4
+  - first:
+      213: 172158033966998900
+    second: Explosion2Stolen_5
+  - first:
+      213: -8970619859694463751
+    second: Explosion2Stolen_6
+  - first:
+      213: 8494553613961669682
+    second: Explosion2Stolen_7
+  - first:
+      213: -7736814887552903270
+    second: Explosion2Stolen_8
+  - first:
+      213: -4324736138508594762
+    second: Explosion2Stolen_9
+  - first:
+      213: -7541295077142971692
+    second: Explosion2Stolen_10
+  - first:
+      213: -4671653034020432735
+    second: Explosion2Stolen_11
+  - first:
+      213: -1721417132237743295
+    second: Explosion2Stolen_12
+  - first:
+      213: 3902561419923711108
+    second: Explosion2Stolen_13
+  - first:
+      213: 4773573849586881926
+    second: Explosion2Stolen_14
+  - first:
+      213: 5743517430945043656
+    second: Explosion2Stolen_15
+  - first:
+      213: 8573542600723722138
+    second: Explosion2Stolen_16
+  - first:
+      213: 8327701011852598904
+    second: Explosion2Stolen_17
+  - first:
+      213: 3793083475349034953
+    second: Explosion2Stolen_18
+  - first:
+      213: 1238373101740213724
+    second: Explosion2Stolen_19
+  - first:
+      213: -6360281435097182836
+    second: Explosion2Stolen_20
+  - first:
+      213: -5079976146324312190
+    second: Explosion2Stolen_21
+  - first:
+      213: 6450265235012572757
+    second: Explosion2Stolen_22
+  - first:
+      213: -3947941812933334094
+    second: Explosion2Stolen_23
+  - first:
+      213: 2112309165935197215
+    second: Explosion2Stolen_24
+  - first:
+      213: 6725143959596907229
+    second: Explosion2Stolen_25
+  - first:
+      213: -4516800754036985769
+    second: Explosion2Stolen_26
+  - first:
+      213: -4877816647974449790
+    second: Explosion2Stolen_27
+  - first:
+      213: -884475474142887527
+    second: Explosion2Stolen_28
+  - first:
+      213: 556459439740637138
+    second: Explosion2Stolen_29
+  - first:
+      213: -2531575880135129302
+    second: Explosion2Stolen_30
+  - first:
+      213: 435449352639882489
+    second: Explosion2Stolen_31
+  - first:
+      213: 4723290556755343060
+    second: Explosion2Stolen_32
+  - first:
+      213: -1840921797648399583
+    second: Explosion2Stolen_33
+  - first:
+      213: 4613962485863493062
+    second: Explosion2Stolen_34
+  - first:
+      213: -8877061680770699083
+    second: Explosion2Stolen_35
+  - first:
+      213: -8376246633308834915
+    second: Explosion2Stolen_36
+  - first:
+      213: -975942159922802828
+    second: Explosion2Stolen_37
+  - first:
+      213: -2805372633275675762
+    second: Explosion2Stolen_38
+  - first:
+      213: -465993196727075852
+    second: Explosion2Stolen_39
+  - first:
+      213: 3812515655622783494
+    second: Explosion2Stolen_40
+  - first:
+      213: 2389930259080240307
+    second: Explosion2Stolen_41
+  - first:
+      213: 650592427482050539
+    second: Explosion2Stolen_42
+  - first:
+      213: -1200349435324296415
+    second: Explosion2Stolen_43
+  - first:
+      213: 4446433515330953198
+    second: Explosion2Stolen_44
+  - first:
+      213: -8100048705996219873
+    second: Explosion2Stolen_45
+  - first:
+      213: 3835970440683499301
+    second: Explosion2Stolen_46
+  - first:
+      213: 2273914177513220582
+    second: Explosion2Stolen_47
+  - first:
+      213: -1797651311987453158
+    second: Explosion2Stolen_48
+  - first:
+      213: 6939806058197059917
+    second: Explosion2Stolen_49
+  - first:
+      213: -3263735446254745384
+    second: Explosion2Stolen_50
+  - first:
+      213: 5295315497141899925
+    second: Explosion2Stolen_51
+  - first:
+      213: -7899914031806650992
+    second: Explosion2Stolen_52
+  - first:
+      213: 3609331605753378644
+    second: Explosion2Stolen_53
+  - first:
+      213: -2927931640564758555
+    second: Explosion2Stolen_54
+  - first:
+      213: -8016957774841863281
+    second: Explosion2Stolen_55
+  - first:
+      213: -3378786903614367562
+    second: Explosion2Stolen_56
+  - first:
+      213: -3027616389935692172
+    second: Explosion2Stolen_57
+  - first:
+      213: 7938394304303638091
+    second: Explosion2Stolen_58
+  - first:
+      213: 6879943083555563634
+    second: Explosion2Stolen_59
+  - first:
+      213: 7480020961227655926
+    second: Explosion2Stolen_60
+  - first:
+      213: 2931435801888134730
+    second: Explosion2Stolen_61
+  - first:
+      213: -5405868889393924689
+    second: Explosion2Stolen_62
+  - first:
+      213: -1645465047858566726
+    second: Explosion2Stolen_63
+  - first:
+      213: 289733439480734774
+    second: Explosion2Stolen_64
+  - first:
+      213: 7998645626593859010
+    second: Explosion2Stolen_65
+  - first:
+      213: -6569123794347933098
+    second: Explosion2Stolen_66
+  - first:
+      213: 2408630722823652964
+    second: Explosion2Stolen_67
+  - first:
+      213: 3415047918703905059
+    second: Explosion2Stolen_68
+  - first:
+      213: -4657217674249435296
+    second: Explosion2Stolen_69
+  - first:
+      213: -6077851420600571202
+    second: Explosion2Stolen_70
+  - first:
+      213: 3429162388488515937
+    second: Explosion2Stolen_71
+  - first:
+      213: 5573092176415197361
+    second: Explosion2Stolen_72
+  - first:
+      213: 455008069289361690
+    second: Explosion2Stolen_73
+  - first:
+      213: 5897808212560280620
+    second: Explosion2Stolen_74
+  - first:
+      213: 3828354847371458426
+    second: Explosion2Stolen_75
+  - first:
+      213: -3743937878408525007
+    second: Explosion2Stolen_76
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Explosion2Stolen_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d93e7592c42c4810800000000000000
+      internalID: 1750814773290613205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosion2Stolen_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5068f9833811bb5a0800000000000000
+      internalID: -6504585981518182907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosion2Stolen_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddc228c1206da6710800000000000000
+      internalID: 1687396314960243933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosion2Stolen_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e1e074cdfdf99970800000000000000
+      internalID: 8762313816390296038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosion2Stolen_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba7b9eaf5ee8824e0800000000000000
+      internalID: -2006196515585280085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosion2Stolen_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47525dbd1d0a36200800000000000000
+      internalID: 172158033966998900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosion2Stolen_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f4d8d714c4f18380800000000000000
+      internalID: -8970619859694463751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosion2Stolen_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23c22bd7187b2e570800000000000000
+      internalID: 8494553613961669682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosion2Stolen_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a979476e9df41a490800000000000000
+      internalID: -7736814887552903270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosion2Stolen_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b196ec35637bf3c0800000000000000
+      internalID: -4324736138508594762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosion2Stolen_10
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dabd743510f75790800000000000000
+      internalID: -7541295077142971692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosion2Stolen_11
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a416592154fa2fb0800000000000000
+      internalID: -4671653034020432735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosion2Stolen_12
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14b92ba1d3c4c18e0800000000000000
+      internalID: -1721417132237743295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosion2Stolen_13
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48462bc4feea82630800000000000000
+      internalID: 3902561419923711108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 32d2e55eeeb775c4b8064c79036d52f4
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Explosion2Stolen_0: 1750814773290613205
+      Explosion2Stolen_1: -6504585981518182907
+      Explosion2Stolen_10: -7541295077142971692
+      Explosion2Stolen_11: -4671653034020432735
+      Explosion2Stolen_12: -1721417132237743295
+      Explosion2Stolen_13: 3902561419923711108
+      Explosion2Stolen_2: 1687396314960243933
+      Explosion2Stolen_3: 8762313816390296038
+      Explosion2Stolen_4: -2006196515585280085
+      Explosion2Stolen_5: 172158033966998900
+      Explosion2Stolen_6: -8970619859694463751
+      Explosion2Stolen_7: 8494553613961669682
+      Explosion2Stolen_8: -7736814887552903270
+      Explosion2Stolen_9: -4324736138508594762
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionForce: 12
   explosionRadius: 2
-  explosionEffect: {fileID: 0}
+  explosionEffect: {fileID: 528414426735544991, guid: 4fb1f7423e8f73d40b031b2c801e2745, type: 3}
   lifetime: 0.5
 --- !u!58 &5657217348203583181
 CircleCollider2D:

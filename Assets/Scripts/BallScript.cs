@@ -42,7 +42,7 @@ public class BallScript : MonoBehaviour
         GameObject obj = Instantiate(ExplosionObject, transform.position, Quaternion.identity);
         float RangeRadius = obj.GetComponent<Explosion>().explosionRadius;
         RangeSprite.transform.localScale = new Vector3(RangeRadius*2, RangeRadius * 2, RangeRadius * 2);
-        Destroy(gameObject,0.1f);
+        Destroy(gameObject,0.01f);
     }
 
     // Update is called once per frame
