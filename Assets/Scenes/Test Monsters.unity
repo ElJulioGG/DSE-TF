@@ -627,9 +627,9 @@ GameObject:
   - component: {fileID: 50228024}
   - component: {fileID: 50228023}
   - component: {fileID: 50228028}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpikeMonster
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -672,7 +672,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.5625, y: 1.71875}
+    oldSize: {x: 1.5, y: 1.375}
     newSize: {x: 0.48, y: 0.44}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -23947,6 +23947,7 @@ MonoBehaviour:
   activeCamera: 0
   currentPlayerTool: 0
   playerDied: 0
+  playerHP: 4
   playerCanInput: 1
   weaponChange: 1
   ducksCollected: 0
