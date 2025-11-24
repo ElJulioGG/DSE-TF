@@ -25,7 +25,7 @@ public class BackgroundFollowCamera : MonoBehaviour
 
         // Sincronizar posici�n del background con la cam
         transform.position = new Vector3(
-            _cameraTransform.position.x,
+            transform.position.x,
             _cameraTransform.position.y,
             transform.position.z
         );

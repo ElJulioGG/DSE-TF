@@ -78,5 +78,8 @@ TagManager:
   - name: Floor
     uniqueID: 729990233
     locked: 0
+  - name: UI
+    uniqueID: 4206219981
+    locked: 0
   m_RenderingLayers:
   - Default
