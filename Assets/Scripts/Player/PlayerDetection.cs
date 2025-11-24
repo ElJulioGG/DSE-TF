@@ -9,7 +9,7 @@ public class PlayerDetection : MonoBehaviour
     private int obstacleLayer;
     private bool isInvincible;
     private float countingInvincible;
-    public float iframeDuration = 3f;
+    public float iframeDuration = 2f;
 
     [SerializeField] private PlayerStatus playerStats;
     private void Start()

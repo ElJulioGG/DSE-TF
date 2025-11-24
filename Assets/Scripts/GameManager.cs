@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] public int activeCamera = 0;
     [SerializeField] public int currentPlayerTool = 0;
     [SerializeField] public bool playerDied;
+    [SerializeField] public int playerHP = 4;
     [SerializeField] public bool playerCanInput = true;
     [SerializeField] public bool weaponChange = true;
     [SerializeField] public int ducksCollected = 0;
@@ -34,8 +35,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R)){
-            SceneManager.SetActiveScene(SceneManager.GetActiveScene());
-        }
+      
     }
 }

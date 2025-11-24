@@ -49,6 +49,15 @@ public class PlayerMovement : MonoBehaviour
     private new CircleCollider2D boxCollider;
     private Camera mainCam;
     private float horizontalInput;
+    [SerializeField] private bool canTakeDamage = true;
+
+    [Header("Invulnerability Settings")]
+    [SerializeField] private float invulnDuration = 2f;
+    [SerializeField] private float flashInterval = 0.1f;
+
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    private bool isInvulnerable = false;
+
 
     private void Start()
     {
@@ -113,9 +122,11 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0) && shotTimer <= 0)
         {
             ballArray.Add(Instantiate(ballPrefab, firePoint.transform.position, Quaternion.identity));
+            SoundFXManager.instance.PlaySoundByName("fly-spit", gameObject.transform, 1f, 1f, false);
+            
             if (ballArray.Count > 2)
             {
-                SoundFXManager.instance.PlaySoundByName("fly-spit", gameObject.transform, 1f, 1f, false);
+                
                 ballArray[0].GetComponent<BallScript>()?.Explode();
                 ballArray.RemoveAt(0);
             }
@@ -230,4 +241,54 @@ public class PlayerMovement : MonoBehaviour
             WatchRight = true;
         }
     }
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.CompareTag("Obstacle") && canTakeDamage)
+    //    {
+    //        TakeDamage();
+    //    }
+    //}
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Obstacle") && canTakeDamage)
+        {
+            TakeDamage();
+        }
+    }
+
+
+    private void TakeDamage()
+    {
+        if (isInvulnerable) return;
+
+        GameManager.instance.playerHP--;
+        SoundFXManager.instance.PlaySoundByName("hit2", gameObject.transform, 1f, 1f, false);
+        StartCoroutine(InvulnerabilityRoutine());
+    }
+    private IEnumerator InvulnerabilityRoutine()
+    {
+        isInvulnerable = true;
+        canTakeDamage = false;
+
+        float timer = 0f;
+        bool isVisible = true;
+
+        // Flashing & invuln loop
+        while (timer < invulnDuration)
+        {
+            // Toggle visibility
+            isVisible = !isVisible;
+            spriteRenderer.enabled = isVisible;
+
+            timer += flashInterval;
+            yield return new WaitForSeconds(flashInterval);
+        }
+
+        // End: restore visibility
+        spriteRenderer.enabled = true;
+
+        isInvulnerable = false;
+        canTakeDamage = true;
+    }
+
 }
