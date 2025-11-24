@@ -122,7 +122,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0) && shotTimer <= 0)
         {
             ballArray.Add(Instantiate(ballPrefab, firePoint.transform.position, Quaternion.identity));
-            SoundFXManager.instance.PlaySoundByName("fly-spit", gameObject.transform, 1f, 1f, false);
+            SoundFXManager.instance.PlaySoundByName("sticky_fire", gameObject.transform, 1f, 1f, false);
             
             if (ballArray.Count > 2)
             {

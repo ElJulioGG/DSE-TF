@@ -8977,7 +8977,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 76.1912}
+  m_Size: {x: 1, y: 313.7}
   m_EdgeRadius: 0
 --- !u!1 &162655934
 GameObject:
@@ -21961,6 +21961,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a2bb178740938e147b4a6146f6b27cc0, type: 3}
   - {fileID: 8300000, guid: 9b52057d89462be46bc03985e3c7d562, type: 3}
   - {fileID: 8300000, guid: 88d131c24c22e9243b3a01e43a61efce, type: 3}
+  - {fileID: 8300000, guid: b9667c9e81be1f64a80321b47247d2f8, type: 3}
+  - {fileID: 8300000, guid: 70922ec56a9f5d84281ead6faf04e0b7, type: 3}
+  - {fileID: 8300000, guid: 3289690a4bec69a4599813b504de5c22, type: 3}
+  - {fileID: 8300000, guid: 9f0dff05e5d879d4a97752aab2c99a9b, type: 3}
 --- !u!4 &1051912925
 Transform:
   m_ObjectHideFlags: 0
@@ -49393,7 +49397,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 76.1912}
+  m_Size: {x: 1, y: 132.59}
   m_EdgeRadius: 0
 --- !u!4 &2053789015 stripped
 Transform:
