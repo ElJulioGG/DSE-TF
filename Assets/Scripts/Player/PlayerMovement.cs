@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
 
     public bool WatchRight = true;
     private new Rigidbody2D rigidbody;
-    private new BoxCollider2D boxCollider;
+    private new CircleCollider2D boxCollider;
     private Camera mainCam;
     private float horizontalInput;
 
@@ -58,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
     private void InitializeComponents()
     {
         rigidbody = GetComponent<Rigidbody2D>();
-        boxCollider = GetComponent<BoxCollider2D>();
+        boxCollider = GetComponent<CircleCollider2D>();
         jumpsRestants = jumpsMax;
         mainCam = Camera.main;
     }
@@ -115,6 +115,7 @@ public class PlayerMovement : MonoBehaviour
             ballArray.Add(Instantiate(ballPrefab, firePoint.transform.position, Quaternion.identity));
             if (ballArray.Count > 2)
             {
+                SoundFXManager.instance.PlaySoundByName("fly-spit", gameObject.transform, 1f, 1f, false);
                 ballArray[0].GetComponent<BallScript>()?.Explode();
                 ballArray.RemoveAt(0);
             }
@@ -163,6 +164,7 @@ public class PlayerMovement : MonoBehaviour
             jumpsRestants--;
             rigidbody.linearVelocity = new Vector2(rigidbody.linearVelocity.x, 0f);
             rigidbody.AddForce(Vector2.up * forceJump, ForceMode2D.Impulse);
+            SoundFXManager.instance.PlaySoundByName("jump",gameObject.transform,1f,1f,false);
         }
 
         wasOnGround = onGround;

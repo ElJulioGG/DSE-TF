@@ -48911,7 +48911,7 @@ Transform:
   m_GameObject: {fileID: 1842852509}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.097, y: -0.35, z: 0}
+  m_LocalPosition: {x: 0.097, y: -0.094, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -49215,7 +49215,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4628163432935387656, guid: a57840d814cae6d9da4e664931a0a2b1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8892968563160019820, guid: a57840d814cae6d9da4e664931a0a2b1, type: 3}
@@ -49225,6 +49226,9 @@ PrefabInstance:
       insertIndex: 1
       addedObject: {fileID: 1005400030}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1540437149571541099, guid: a57840d814cae6d9da4e664931a0a2b1, type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 2053789025}
     - targetCorrespondingSourceObject: {fileID: 1540437149571541099, guid: a57840d814cae6d9da4e664931a0a2b1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2053789021}
@@ -49352,6 +49356,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iframeDuration: 3
   playerStats: {fileID: 2053789020}
+--- !u!58 &2053789025
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825533075}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: -0.01}
+  m_Radius: 0.50000006
 --- !u!1 &2100339590
 GameObject:
   m_ObjectHideFlags: 0

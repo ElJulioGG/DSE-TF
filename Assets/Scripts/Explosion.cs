@@ -27,6 +27,7 @@ public class Explosion : MonoBehaviour
 
     void Explode()
     {
+        SoundFXManager.instance.PlaySoundByName("bomb-explode", gameObject.transform, 1f, 1f, false);
         if (explosionEffect != null)
         {
             Instantiate(explosionEffect, transform.position, Quaternion.identity);
