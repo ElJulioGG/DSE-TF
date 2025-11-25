@@ -16,6 +16,7 @@ public class BasicEnemyMove : MonoBehaviour
     private int enemyLayer;
     private bool canMove = true;
 
+    [SerializeField] private GameObject enemyDeatheffect;
 
     private void Awake()
     {
@@ -55,6 +56,7 @@ public class BasicEnemyMove : MonoBehaviour
     }
     public void Death()
     {
+        SoundFXManager.instance.PlaySoundByName("EnemyDeath",gameObject.transform,1f,1f,false);
         canMove = false;
         isDeath = true;
         animator.SetBool("isDeath", isDeath);
@@ -67,8 +69,14 @@ public class BasicEnemyMove : MonoBehaviour
         {
             t += Time.deltaTime;
         }
-        
 
-        Destroy(gameObject, 2f); 
+
+        Invoke("DestroyEnemy", 2f);
+    }
+    private void DestroyEnemy()
+    {
+        SoundFXManager.instance.PlaySoundByName("EnemyExplode", gameObject.transform, 1f, 1f, false);
+        Instantiate(enemyDeatheffect, gameObject.transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 }
