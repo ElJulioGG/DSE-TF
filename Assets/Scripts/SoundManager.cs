@@ -185,4 +185,21 @@ public class SoundFXManager : MonoBehaviour
         }
         return false;
     }
+    public void ChangePitchByName(string clipName, float newPitch)
+    {
+        if (!activeSources.TryGetValue(clipName, out List<AudioSource> sources))
+            return;
+
+        // Clean null / destroyed references
+        sources.RemoveAll(s => s == null);
+
+        foreach (var source in sources)
+        {
+            if (source != null && source.gameObject.activeSelf)
+            {
+                source.pitch = newPitch;
+            }
+        }
+    }
+
 }
