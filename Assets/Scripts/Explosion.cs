@@ -40,6 +40,21 @@ public class Explosion : MonoBehaviour
             if (col.CompareTag("Projectile"))
                 continue;
 
+            if (col.CompareTag("Enemy"))
+            {
+                BasicEnemyMove enemy = col.GetComponent<BasicEnemyMove>();
+                enemy.Death();
+
+                // Rotación aleatoria al morir
+                Rigidbody2D enemyRb = col.attachedRigidbody;
+                if (enemyRb != null)
+                {
+                    float randomRotation = Random.Range(0f, 360f);
+                    enemyRb.MoveRotation(randomRotation);
+                }
+            }
+
+
             Rigidbody2D rb = col.attachedRigidbody;
             if (rb == null) continue;
 

@@ -14,4 +14,5 @@ public class BasicEnemySpace : MonoBehaviour
         float rightX = Mathf.Max(limitL.localPosition.x, limitR.localPosition.x);
         enemyReference.StartEnemy(leftX, rightX);
     }
+    
 }

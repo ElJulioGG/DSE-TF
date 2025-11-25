@@ -54,6 +54,14 @@ public class BasicEnemyMove : MonoBehaviour
         body.linearVelocityX = speedX;
         sprite.flipX = speedX < 0 ? true : false;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Explosion"))
+        {
+            Death();
+        }
+    }
     public void Death()
     {
         SoundFXManager.instance.PlaySoundByName("EnemyDeath",gameObject.transform,1f,1f,false);
