@@ -19316,7 +19316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedX: 0.7
-  deathDuration: 2
+  deathDuration: 1.5
   enemyDeatheffect: {fileID: 2097256638911367719, guid: 92a867a5d16d83b4dbc67222cad501ba, type: 3}
 --- !u!1 &637058857
 GameObject:
@@ -49745,6 +49745,7 @@ MonoBehaviour:
   playerCanInput: 1
   weaponChange: 1
   ducksCollected: 0
+  coins: 0
 --- !u!4 &1827911961
 Transform:
   m_ObjectHideFlags: 0

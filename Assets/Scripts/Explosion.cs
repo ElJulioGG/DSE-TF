@@ -45,14 +45,15 @@ public class Explosion : MonoBehaviour
                 BasicEnemyMove enemy = col.GetComponent<BasicEnemyMove>();
                 enemy.Death();
 
-                // Rotación aleatoria al morir
                 Rigidbody2D enemyRb = col.attachedRigidbody;
                 if (enemyRb != null)
                 {
-                    float randomRotation = Random.Range(0f, 360f);
-                    enemyRb.MoveRotation(randomRotation);
+                    // Apply random torque so the body spins
+                    float randomTorque = Random.Range(-200f, 200f);
+                    enemyRb.AddTorque(randomTorque, ForceMode2D.Impulse);
                 }
             }
+
 
 
             Rigidbody2D rb = col.attachedRigidbody;
