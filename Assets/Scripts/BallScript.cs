@@ -57,7 +57,6 @@ public class BallScript : MonoBehaviour
                 canDet = true;
             }
         }
-        
     }
 
     void OnCollisionEnter2D(Collision2D collision)

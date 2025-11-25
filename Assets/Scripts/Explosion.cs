@@ -49,7 +49,7 @@ public class Explosion : MonoBehaviour
                 if (enemyRb != null)
                 {
                     // Apply random torque so the body spins
-                    float randomTorque = Random.Range(-200f, 200f);
+                    float randomTorque = Random.Range(-30f, 30f);
                     enemyRb.AddTorque(randomTorque, ForceMode2D.Impulse);
                 }
             }

@@ -6,6 +6,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private int startHP = 5;
     private bool lowHP = false;
     private bool oneHP = false;
+    [SerializeField] private float musicVolume = 0.7f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     private void Awake()
@@ -15,7 +16,7 @@ public class GameController : MonoBehaviour
     }
     void Start()
     {
-        SoundFXManager.instance.PlaySoundByName("bgm", gameObject.transform, 1f, 1f, true);
+        SoundFXManager.instance.PlaySoundByName("bgm", gameObject.transform, musicVolume, 1f, true);
         GameManager.instance.playerDied = false;
         GameManager.instance.playerHP = startHP;
     }
@@ -51,7 +52,7 @@ public class GameController : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
-           
+            SoundFXManager.instance.StopSoundByName("bgm");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }

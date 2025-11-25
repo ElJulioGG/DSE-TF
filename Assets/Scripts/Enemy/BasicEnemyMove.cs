@@ -17,6 +17,7 @@ public class BasicEnemyMove : MonoBehaviour
     private bool canMove = true;
 
     [SerializeField] private GameObject enemyDeatheffect;
+    [SerializeField] private PhysicsMaterial2D deathMaterial;
 
     private void Awake()
     {
@@ -64,26 +65,36 @@ public class BasicEnemyMove : MonoBehaviour
     }
     public void Death()
     {
-        SoundFXManager.instance.PlaySoundByName("EnemyDeath",gameObject.transform,1f,1f,false);
+        SoundFXManager.instance.PlaySoundByName("fly-spit", transform, 1f, 1f, false);
         canMove = false;
         isDeath = true;
+
         animator.SetBool("isDeath", isDeath);
+
+        // Ignore collisions so it doesn’t collide horizontally
         Physics2D.IgnoreLayerCollision(enemyLayer, platformLayer, true);
         Physics2D.IgnoreLayerCollision(enemyLayer, borderLayer, true);
 
-        float t = 0f;
-
-        while (t < deathDuration)
+        // Apply the BOUNCY MATERIAL
+        Collider2D col = GetComponent<Collider2D>();
+        if (col != null)
         {
-            t += Time.deltaTime;
+            col.sharedMaterial = deathMaterial;
         }
 
+        // Give it a vertical bounce impulse (optional)
+        if (body != null)
+        {
+            body.linearVelocity = new Vector2(0, 10f); // modify force if needed
+            body.gravityScale = 1; // ensure gravity works
+        }
 
-        Invoke("DestroyEnemy", 2f);
+        Invoke("DestroyEnemy", deathDuration);
     }
+
     private void DestroyEnemy()
     {
-        SoundFXManager.instance.PlaySoundByName("EnemyExplode", gameObject.transform, 1f, 1f, false);
+        SoundFXManager.instance.PlaySoundByName("block-destroy", gameObject.transform, 1f, 1f, false);
         Instantiate(enemyDeatheffect, gameObject.transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
