@@ -233,6 +233,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   speedX: 0
+  enemyDeatheffect: {fileID: 2097256638911367719, guid: 92a867a5d16d83b4dbc67222cad501ba, type: 3}
+  deathMaterial: {fileID: 6200000, guid: 922a59f1069d14345aca8eacb99dcb91, type: 2}
+  coinPrefab: {fileID: 9127654267511524653, guid: 823c81c79b3d2f249939578ccd25bc31, type: 3}
+  minCoins: 10
+  maxCoins: 20
+  coinSpawnForce: 5
+  isAlmostDeath: 0
+  painDuration: 0.6
   deathDuration: 2
 --- !u!1 &6995684780240491171
 GameObject:

@@ -45,6 +45,34 @@ public class Explosion : MonoBehaviour
                 BasicEnemyMove enemy = col.GetComponent<BasicEnemyMove>();
                 col.attachedRigidbody.linearVelocity = Vector2.zero; // Cancel current velocity
                 enemy.Death();
+                
+                if (enemy != null) {
+                    Debug.Log("Enemy hit by explosion");
+                    enemy.Death();
+                }
+
+                SpikeEnemyMove spikeEnemy = col.GetComponent<SpikeEnemyMove>();
+                if (spikeEnemy != null && spikeEnemy.isAlmostDeath) {
+                    Debug.Log("Spike Enemy hit by explosion");
+                    spikeEnemy.Death();
+
+                } /*else if (spikeEnemy != null) {
+                    spikeEnemy.PreDeath();
+                    Debug.Log("Spike Enemy hit but not almost death");
+                    return;
+                }*/
+
+                NoisyEnemyMove noisyEnemy = col.GetComponent<NoisyEnemyMove>();
+                if (enemy != null) {
+                    Debug.Log("Noisy Enemy hit by explosion");
+                    noisyEnemy.Death();
+                }
+
+                RunnerEnemyMove runnerEnemy = col.GetComponent<RunnerEnemyMove>();
+                if (runnerEnemy != null) {
+                    Debug.Log("Runner Enemy hit by explosion");
+                    runnerEnemy.Death();
+                }
 
                 Rigidbody2D enemyRb = col.attachedRigidbody;
                 if (enemyRb != null)
