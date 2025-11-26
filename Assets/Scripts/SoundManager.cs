@@ -12,7 +12,12 @@ public class SoundFXManager : MonoBehaviour
     private Dictionary<string, AudioClip> clipLookup;
     private Dictionary<string, Queue<AudioSource>> audioSourcePool;
     private Dictionary<string, List<AudioSource>> activeSources;
+    private Dictionary<string, int> maxVoices;
     private Transform soundParent;
+
+    // --- MAX ionstances (Fix #1) ---
+    [SerializeField]private int defaultMaxInstancesPerClip = 6;
+
 
     private void Awake()
     {
@@ -23,10 +28,17 @@ public class SoundFXManager : MonoBehaviour
             InitializeClipLookup();
             audioSourcePool = new Dictionary<string, Queue<AudioSource>>();
             activeSources = new Dictionary<string, List<AudioSource>>();
+            maxVoices = new Dictionary<string, int>();
 
-            // Create a parent object for all audio sources
             soundParent = new GameObject("SoundFX_Pool").transform;
             soundParent.SetParent(transform);
+
+            // Initialize max voices for each clip
+            foreach (var clip in soundFXClips)
+            {
+                if (clip != null && !maxVoices.ContainsKey(clip.name))
+                    maxVoices.Add(clip.name, defaultMaxInstancesPerClip);
+            }
         }
         else
         {
@@ -54,6 +66,17 @@ public class SoundFXManager : MonoBehaviour
             return;
         }
 
+        // --- MAX VOICES CHECK ---
+        int maxAllowed = maxVoices.ContainsKey(clipName) ? maxVoices[clipName] : defaultMaxInstancesPerClip;
+
+        if (activeSources.TryGetValue(clipName, out List<AudioSource> list))
+        {
+            list.RemoveAll(s => s == null);
+
+            if (list.Count >= maxAllowed)
+                return; // Prevent audio overload
+        }
+
         AudioSource source = GetAudioSourceFromPool(clipName, spawnTransform.position);
         if (source == null) return;
 
@@ -76,7 +99,6 @@ public class SoundFXManager : MonoBehaviour
 
     private AudioSource GetAudioSourceFromPool(string clipName, Vector3 position)
     {
-        // Clean up null references in pool first
         CleanPool(clipName);
 
         if (!audioSourcePool.TryGetValue(clipName, out Queue<AudioSource> pool))
@@ -87,14 +109,12 @@ public class SoundFXManager : MonoBehaviour
 
         AudioSource source = null;
 
-        // Try to get from pool
         while (pool.Count > 0 && source == null)
         {
             source = pool.Dequeue();
-            if (source == null) continue; // Skip destroyed objects
+            if (source == null) continue;
         }
 
-        // Create new if needed
         if (source == null)
         {
             GameObject newObj = Instantiate(soundFXPrefab.gameObject, position, Quaternion.identity, soundParent);
@@ -115,7 +135,6 @@ public class SoundFXManager : MonoBehaviour
     {
         if (audioSourcePool.TryGetValue(clipName, out Queue<AudioSource> pool))
         {
-            // Remove any null references
             var tempList = new List<AudioSource>(pool);
             tempList.RemoveAll(x => x == null);
             pool.Clear();
@@ -132,7 +151,6 @@ public class SoundFXManager : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
 
-        // Check if source was destroyed while waiting
         if (source == null || !source.gameObject) yield break;
 
         if (activeSources.ContainsKey(clipName))
@@ -185,12 +203,12 @@ public class SoundFXManager : MonoBehaviour
         }
         return false;
     }
+
     public void ChangePitchByName(string clipName, float newPitch)
     {
         if (!activeSources.TryGetValue(clipName, out List<AudioSource> sources))
             return;
 
-        // Clean null / destroyed references
         sources.RemoveAll(s => s == null);
 
         foreach (var source in sources)
@@ -201,5 +219,4 @@ public class SoundFXManager : MonoBehaviour
             }
         }
     }
-
 }

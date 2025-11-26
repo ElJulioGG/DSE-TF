@@ -9,17 +9,28 @@ public class Coin : MonoBehaviour
     [SerializeField] private float flashSpeed = 0.15f;
 
     [SerializeField] private AudioSource coinBounceSound;
+
     private SpriteRenderer sprite;
+    private Rigidbody2D rb;
     private int floorLayer;
 
     private void Awake()
     {
         sprite = GetComponent<SpriteRenderer>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void Start()
     {
         floorLayer = LayerMask.NameToLayer("Floor");
+
+        // --- RANDOM STARTING TORQUE ---
+        if (rb != null)
+        {
+            float randomTorque = Random.Range(-1f, 1f);
+            rb.AddTorque(randomTorque, ForceMode2D.Impulse);
+        }
+
         StartCoroutine(AutoDestroyRoutine());
     }
 
@@ -64,9 +75,7 @@ public class Coin : MonoBehaviour
             yield return new WaitForSeconds(flashSpeed);
         }
 
-        // Ensure sprite visible before dying
         sprite.enabled = true;
-
         Destroy(gameObject);
     }
 }
