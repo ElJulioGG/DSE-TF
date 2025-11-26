@@ -5,36 +5,23 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement Settings")]
-    [Tooltip("The maximum speed the player can reach on the ground.")]
     [SerializeField] private float maxGroundSpeed = 8f;
-    [Tooltip("The force applied to the player to move them on the ground.")]
     [SerializeField] private float groundAcceleration = 100f;
-    [Tooltip("The maximum speed the player can reach in the air.")]
     [SerializeField] private float maxAirSpeed = 5f;
-    [Tooltip("The force applied to the player to move them in the air.")]
     [SerializeField] private float airAcceleration = 50f;
-    [Tooltip("Linear drag applied when on the ground to help the player stop.")]
     [SerializeField] private float groundDrag = 6f;
-
     [SerializeField] private LayerMask wallMask;
-
 
     [Header("Jump Settings")]
     [SerializeField] private float forceJump = 15f;
     [SerializeField] private int jumpsMax = 2;
     [SerializeField] private LayerMask MaskFloor;
-    private int jumpsRestants;
-    private bool wasOnGround;
-
 
     [Header("Fall Settings")]
-    [Tooltip("Multiplier for gravity when falling to make jumps feel less floaty.")]
     [SerializeField] private float fallMultiplier = 2.5f;
 
     [Header("Knockback Settings")]
     [SerializeField] private float knockbackDuration = 0.2f;
-    private float knockbackTimer;
-    private bool isKnockedBack = false;
 
     [Header("Health Settings")]
     [SerializeField] private int health;
@@ -42,29 +29,33 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Projectile Settings")]
     [SerializeField] private GameObject ballPrefab;
-    [SerializeField] public List<GameObject> ballArray;
+    [SerializeField] private List<GameObject> ballArray = new List<GameObject>();
     [SerializeField] private float shotDelay = 0.5f;
     [SerializeField] private GameObject firePoint;
-    private float shotTimer;
-
-    public bool WatchRight = true;
-    private new Rigidbody2D rigidbody;
-    private new CircleCollider2D boxCollider;
-    private Camera mainCam;
-    private float horizontalInput;
-    [SerializeField] private bool canTakeDamage = true;
 
     [Header("Invulnerability Settings")]
     [SerializeField] private float invulnDuration = 2f;
     [SerializeField] private float flashInterval = 0.1f;
-
     [SerializeField] private SpriteRenderer spriteRenderer;
+
     [SerializeField] private PhysicsMaterial2D noFrictionMaterial;
+
+    // Private fields
+    private Rigidbody2D rigidbody;
+    private CircleCollider2D boxCollider;
+    private Camera mainCam;
+    private float horizontalInput;
+    private float shotTimer;
+    private float knockbackTimer;
+    private int jumpsRestants;
+    private bool wasOnGround;
+    private bool isKnockedBack = false;
     private bool isInvulnerable = false;
-    [SerializeField] private bool grounded = true;
+    private bool canTakeDamage = true;
 
+    public bool WatchRight = true;
 
-    private void Start()
+    private void Awake()
     {
         InitializeComponents();
     }
@@ -73,43 +64,49 @@ public class PlayerMovement : MonoBehaviour
     {
         rigidbody = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<CircleCollider2D>();
-        jumpsRestants = jumpsMax;
         mainCam = Camera.main;
+        jumpsRestants = jumpsMax;
     }
 
     private void Update()
     {
+        // Clean up destroyed balls every frame
+        ballArray.RemoveAll(b => b == null);
+
         if (GameManager.instance.playerCanInput && !isKnockedBack)
         {
-            // Input for jump & fire only (movement input moved to FixedUpdate)
             HandleJumpInput();
             HandleFire();
         }
         else
         {
-            horizontalInput = 0;
+            horizontalInput = 0f;
         }
 
         if (isKnockedBack)
         {
             knockbackTimer -= Time.deltaTime;
-            if (knockbackTimer <= 0)
-                isKnockedBack = false;
+            if (knockbackTimer <= 0f) isKnockedBack = false;
         }
 
-        if (shotTimer > 0)
-            shotTimer -= Time.deltaTime;
+        if (shotTimer > 0f) shotTimer -= Time.deltaTime;
 
         GestionarOrientacion(horizontalInput);
     }
 
     private void FixedUpdate()
     {
-        grounded = IsOnGround();
+        bool grounded = IsOnGround();
+
+        // Reset jumps only when landing
+        if (grounded && !wasOnGround)
+            jumpsRestants = jumpsMax;
+
+        wasOnGround = grounded;
 
         if (isKnockedBack) return;
 
-        // Read movement input here for zero lag
+        // Get input in FixedUpdate for smooth movement
         horizontalInput = Input.GetAxisRaw("Horizontal");
 
         HandleMovement();
@@ -126,81 +123,81 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleFire()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && shotTimer <= 0)
+        // LEFT CLICK - Shoot
+        if (Input.GetKeyDown(KeyCode.Mouse0) && shotTimer <= 0f)
         {
-            ballArray.Add(Instantiate(ballPrefab, firePoint.transform.position, Quaternion.identity));
-            SoundFXManager.instance.PlaySoundByName("sticky_fire", gameObject.transform, 1f, 1f, false);
-            
+            GameObject ball = Instantiate(ballPrefab, firePoint.transform.position, Quaternion.identity);
+            ballArray.Add(ball);
+
+            SoundFXManager.instance.PlaySoundByName("sticky_fire", transform, 1f, 1f, false);
+
+            // Max 2 active balls - destroy oldest if we go over
             if (ballArray.Count > 2)
             {
-                
-                ballArray[0].GetComponent<BallScript>()?.Explode();
+                GameObject oldest = ballArray[0];
+                if (oldest != null)
+                {
+                    BallScript bs = oldest.GetComponent<BallScript>();
+                    if (bs != null) bs.ForceExplode();
+                }
                 ballArray.RemoveAt(0);
             }
+
             shotTimer = shotDelay;
         }
 
+        // RIGHT CLICK - Detonate only READY balls (canDet == true)
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
-            if (ballArray.Count > 0)
+            for (int i = ballArray.Count - 1; i >= 0; i--)
             {
-                foreach (GameObject ball in ballArray)
+                GameObject ball = ballArray[i];
+                if (ball == null) continue;
+
+                BallScript script = ball.GetComponent<BallScript>();
+                if (script != null && script.canDet)
                 {
-                    if (ball != null)
-                        ball.GetComponent<BallScript>()?.Explode();
+                    script.Explode();
+                    // Do NOT remove from list here - it will be cleaned up next frame via RemoveAll(null)
                 }
-                ballArray.Clear();
             }
+            // We no longer do ballArray.Clear() - this was the bug!
         }
     }
-    private void ChangeFricition()
-    {
-        if (IsOnGround() && horizontalInput == 0)
-        {
-            boxCollider.sharedMaterial = noFrictionMaterial;
-        }
-        else
-        {
-            boxCollider.sharedMaterial = null;
-        }
-    }
+
     private bool IsOnGround()
     {
         Vector2 boxSize = new Vector2(boxCollider.bounds.size.x * 0.6f, 0.1f);
         Vector2 boxCenter = new Vector2(boxCollider.bounds.center.x, boxCollider.bounds.min.y - 0.05f);
-        RaycastHit2D raycastHit = Physics2D.BoxCast(boxCenter, boxSize, 0f, Vector2.down, 0.05f, MaskFloor);
 
-        Color color = raycastHit.collider ? Color.green : Color.red;
+        RaycastHit2D hit = Physics2D.BoxCast(boxCenter, boxSize, 0f, Vector2.down, 0.05f, MaskFloor);
+
+#if UNITY_EDITOR
+        Color color = hit.collider ? Color.green : Color.red;
         Debug.DrawLine(boxCenter - new Vector2(boxSize.x / 2, 0), boxCenter + new Vector2(boxSize.x / 2, 0), color);
+#endif
 
-        return raycastHit.collider != null;
+        return hit.collider != null;
     }
 
     private void HandleJumpInput()
     {
-        bool onGround = IsOnGround();
-
-        // Reset jumps only when landing
-        if (onGround && !wasOnGround)
+        if (Input.GetKeyDown(KeyCode.Space) && jumpsRestants > 0)
         {
-            jumpsRestants = jumpsMax;
+            // Allow jump from ground or mid-air if we still have extra jumps
+            if (IsOnGround() || jumpsRestants < jumpsMax)
+            {
+                jumpsRestants--;
+                rigidbody.linearVelocity = new Vector2(rigidbody.linearVelocity.x, 0f);
+                rigidbody.AddForce(Vector2.up * forceJump, ForceMode2D.Impulse);
+                SoundFXManager.instance.PlaySoundByName("jump", transform, 1f, 1f, false);
+            }
         }
-
-        // Allow jump on ground OR if double-jump is available
-        if (Input.GetKeyDown(KeyCode.Space) && jumpsRestants > 0 && (onGround || jumpsRestants < jumpsMax))
-        {
-            jumpsRestants--;
-            rigidbody.linearVelocity = new Vector2(rigidbody.linearVelocity.x, 0f);
-            rigidbody.AddForce(Vector2.up * forceJump, ForceMode2D.Impulse);
-            SoundFXManager.instance.PlaySoundByName("jump",gameObject.transform,1f,1f,false);
-        }
-
-        wasOnGround = onGround;
     }
 
     private void ApplyFallGravity()
     {
-        if (rigidbody.linearVelocity.y < 0)
+        if (rigidbody.linearVelocity.y < 0f)
         {
             rigidbody.linearVelocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.fixedDeltaTime;
         }
@@ -211,78 +208,73 @@ public class PlayerMovement : MonoBehaviour
         float acceleration = IsOnGround() ? groundAcceleration : airAcceleration;
         float maxSpeed = IsOnGround() ? maxGroundSpeed : maxAirSpeed;
 
-        // Only apply force if not pushing into a wall
-        if (!IsAgainstWall())
+        // Only add force if we're not pushing into a wall
+        if (!IsAgainstWall(horizontalInput))
         {
-            rigidbody.AddForce(new Vector2(horizontalInput * acceleration, 0f));
+            rigidbody.AddForce(Vector2.right * horizontalInput * acceleration);
         }
 
-        // Clamp speed
-        rigidbody.linearVelocity = new Vector2(
-            Mathf.Clamp(rigidbody.linearVelocity.x, -maxSpeed, maxSpeed),
-            rigidbody.linearVelocity.y
-        );
+        // Clamp horizontal speed
+        float clampedX = Mathf.Clamp(rigidbody.linearVelocity.x, -maxSpeed, maxSpeed);
+        rigidbody.linearVelocity = new Vector2(clampedX, rigidbody.linearVelocity.y);
 
-        // Stop sliding when not moving and touching wall
-        if (horizontalInput == 0 && IsAgainstWall())
+        // Stop completely if pressing against wall and no input
+        if (horizontalInput == 0f && IsAgainstWall(0))
         {
-            rigidbody.linearVelocity = new Vector2(0, rigidbody.linearVelocity.y);
+            rigidbody.linearVelocity = new Vector2(0f, rigidbody.linearVelocity.y);
         }
 
-        // Apply drag
+        // Apply drag only on ground
         rigidbody.linearDamping = IsOnGround() ? groundDrag : 0.5f;
     }
 
-    private bool IsAgainstWall()
+    private bool IsAgainstWall(float inputDirection)
     {
-        float skinWidth = 0.05f;
-        Vector2 origin = boxCollider.bounds.center;
-        Vector2 size = new Vector2(0.1f, boxCollider.bounds.size.y * 0.9f);
+        if (inputDirection == 0f) // used only for the "stop sliding" check
+        {
+            // Check both sides when no input
+            return Physics2D.OverlapBox(boxCollider.bounds.center + Vector3.left * 0.06f,
+                new Vector2(0.12f, boxCollider.bounds.size.y * 0.9f), 0f, wallMask) ||
+                   Physics2D.OverlapBox(boxCollider.bounds.center + Vector3.right * 0.06f,
+                new Vector2(0.12f, boxCollider.bounds.size.y * 0.9f), 0f, wallMask);
+        }
 
-        bool leftHit = Physics2D.OverlapBox(origin + Vector2.left * skinWidth, size, 0f, wallMask);
-        bool rightHit = Physics2D.OverlapBox(origin + Vector2.right * skinWidth, size, 0f, wallMask);
+        bool left = inputDirection < 0 && Physics2D.OverlapBox(boxCollider.bounds.center + Vector3.left * 0.06f,
+            new Vector2(0.12f, boxCollider.bounds.size.y * 0.9f), 0f, wallMask);
+        bool right = inputDirection > 0 && Physics2D.OverlapBox(boxCollider.bounds.center + Vector3.right * 0.06f,
+            new Vector2(0.12f, boxCollider.bounds.size.y * 0.9f), 0f, wallMask);
 
-        return (horizontalInput < 0 && leftHit) || (horizontalInput > 0 && rightHit);
+        return left || right;
     }
 
-
-
-    private void GestionarOrientacion(float inputMovimiento)
+    private void GestionarOrientacion(float input)
     {
-        if (inputMovimiento < 0 && WatchRight)
+        if (input > 0.01f && !WatchRight)
         {
-            transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
-            WatchRight = false;
-        }
-        else if (inputMovimiento > 0 && !WatchRight)
-        {
-            transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, 1f);
             WatchRight = true;
         }
+        else if (input < -0.01f && WatchRight)
+        {
+            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, 1f);
+            WatchRight = false;
+        }
     }
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    if (collision.CompareTag("Obstacle") && canTakeDamage)
-    //    {
-    //        TakeDamage();
-    //    }
-    //}
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy") && canTakeDamage)
         {
             TakeDamage();
 
+            // Kill enemy
             BasicEnemyMove enemy = collision.gameObject.GetComponent<BasicEnemyMove>();
-            enemy.Death();
+            if (enemy != null) enemy.Death();
 
+            // Little spin on death
             Rigidbody2D enemyRb = collision.rigidbody;
             if (enemyRb != null)
-            {
-                // Apply random torque so the body spins
-                float randomTorque = Random.Range(-1f, 1f);
-                enemyRb.AddTorque(randomTorque, ForceMode2D.Impulse);
-            }
+                enemyRb.AddTorque(Random.Range(-10f, 10f), ForceMode2D.Impulse);
         }
 
         if (collision.gameObject.CompareTag("Obstacle") && canTakeDamage)
@@ -291,40 +283,34 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-
-
     private void TakeDamage()
     {
         if (isInvulnerable) return;
 
         GameManager.instance.playerHP--;
-        SoundFXManager.instance.PlaySoundByName("hit2", gameObject.transform, 1f, 1f, false);
+        SoundFXManager.instance.PlaySoundByName("hit2", transform, 1f, 1f, false);
+
         StartCoroutine(InvulnerabilityRoutine());
     }
+
     private IEnumerator InvulnerabilityRoutine()
     {
         isInvulnerable = true;
         canTakeDamage = false;
 
         float timer = 0f;
-        bool isVisible = true;
+        bool visible = true;
 
-        // Flashing & invuln loop
         while (timer < invulnDuration)
         {
-            // Toggle visibility
-            isVisible = !isVisible;
-            spriteRenderer.enabled = isVisible;
-
+            visible = !visible;
+            spriteRenderer.enabled = visible;
             timer += flashInterval;
             yield return new WaitForSeconds(flashInterval);
         }
 
-        // End: restore visibility
         spriteRenderer.enabled = true;
-
         isInvulnerable = false;
         canTakeDamage = true;
     }
-
 }

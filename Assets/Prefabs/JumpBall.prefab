@@ -136,6 +136,7 @@ MonoBehaviour:
   ExplosionObject: {fileID: 1089624342767190682, guid: 4f8153c26a79efb4daf66527f2c27aee, type: 3}
   RangeSprite: {fileID: 2371666629816612332}
   detTime: 0
+  cooldown: 0.2
   canDet: 0
   stuck: 0
 --- !u!58 &467286040186424380
