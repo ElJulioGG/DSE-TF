@@ -63,7 +63,7 @@ public class Explosion : MonoBehaviour
                 }*/
 
                 NoisyEnemyMove noisyEnemy = col.GetComponent<NoisyEnemyMove>();
-                if (enemy != null) {
+                if (noisyEnemy != null) {
                     Debug.Log("Noisy Enemy hit by explosion");
                     noisyEnemy.Death();
                 }
