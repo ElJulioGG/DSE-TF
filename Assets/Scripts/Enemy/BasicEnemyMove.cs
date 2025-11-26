@@ -83,8 +83,8 @@ public class BasicEnemyMove : MonoBehaviour
         animator.SetBool("isDeath", true);
 
         // Disable horizontal collisions so enemy doesn't get stuck
-        Physics2D.IgnoreLayerCollision(enemyLayer, platformLayer, true);
-        Physics2D.IgnoreLayerCollision(enemyLayer, borderLayer, true);
+       // Physics2D.IgnoreLayerCollision(enemyLayer, platformLayer, true);
+        //Physics2D.IgnoreLayerCollision(enemyLayer, borderLayer, true);
 
         // Assign the bouncy material
         Collider2D col = GetComponent<Collider2D>();
