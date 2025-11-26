@@ -43,14 +43,15 @@ public class Explosion : MonoBehaviour
             if (col.CompareTag("Enemy"))
             {
                 BasicEnemyMove enemy = col.GetComponent<BasicEnemyMove>();
+                col.attachedRigidbody.linearVelocity = Vector2.zero; // Cancel current velocity
                 enemy.Death();
 
                 Rigidbody2D enemyRb = col.attachedRigidbody;
                 if (enemyRb != null)
                 {
                     // Apply random torque so the body spins
-                    float randomTorque = Random.Range(-30f, 30f);
-                    enemyRb.AddTorque(randomTorque, ForceMode2D.Impulse);
+                    //float randomTorque = Random.Range(-30f, 30f);
+                    //enemyRb.AddTorque(randomTorque, ForceMode2D.Impulse);
                 }
             }
 
@@ -61,6 +62,7 @@ public class Explosion : MonoBehaviour
 
             // Cancel downward momentum before explosion force
             if (rb.linearVelocity.y < 0)
+
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
 
             // Direction from explosion center to object
@@ -77,6 +79,7 @@ public class Explosion : MonoBehaviour
 
             // Apply explosion impulse
             rb.AddForce(direction * explosionForce * forceMultiplier, ForceMode2D.Impulse);
+            print("Forceaplied");
         }
     }
 

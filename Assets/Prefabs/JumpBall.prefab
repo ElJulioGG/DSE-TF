@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3498235275710315170}
   - component: {fileID: 5655514232197497169}
   - component: {fileID: 467286040186424380}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: JumpBall
   m_TagString: Projectile
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3509893307658670733}
   - component: {fileID: 1464294281379107351}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RangeRadius
   m_TagString: Untagged
   m_Icon: {fileID: 0}

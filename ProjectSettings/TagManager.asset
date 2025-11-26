@@ -12,6 +12,7 @@ TagManager:
   - Obstacle
   - ShowcaseCamera
   - Explosion
+  - Coin
   layers:
   - Default
   - TransparentFX

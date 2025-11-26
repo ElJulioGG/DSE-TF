@@ -19,6 +19,11 @@ public class BasicEnemyMove : MonoBehaviour
     [SerializeField] private GameObject enemyDeatheffect;
     [SerializeField] private PhysicsMaterial2D deathMaterial;
 
+    [SerializeField] private GameObject coinPrefab;
+    [SerializeField] private int minCoins = 10;
+    [SerializeField] private int maxCoins = 20;
+    [SerializeField] private float coinSpawnForce = 5f;
+
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
@@ -32,6 +37,7 @@ public class BasicEnemyMove : MonoBehaviour
         borderLayer = LayerMask.NameToLayer("Border");
         enemyLayer = LayerMask.NameToLayer("Enemy");
     }
+
     public void StartEnemy(float limitLeft, float limitRight)
     {
         this.limitLeft = limitLeft;
@@ -40,6 +46,8 @@ public class BasicEnemyMove : MonoBehaviour
 
     void Update()
     {
+        // STOP movement overrides once dead
+        if (isDeath) return;
 
         if (!canMove)
         {
@@ -48,12 +56,14 @@ public class BasicEnemyMove : MonoBehaviour
         }
 
         float posX = transform.localPosition.x;
+
         if (posX < limitLeft && speedX < 0 || posX > limitRight && speedX > 0)
         {
             speedX *= -1;
         }
+
         body.linearVelocityX = speedX;
-        sprite.flipX = speedX < 0 ? true : false;
+        sprite.flipX = speedX < 0;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -63,30 +73,31 @@ public class BasicEnemyMove : MonoBehaviour
             Death();
         }
     }
+
     public void Death()
     {
         SoundFXManager.instance.PlaySoundByName("fly-spit", transform, 1f, 1f, false);
+
         canMove = false;
         isDeath = true;
+        animator.SetBool("isDeath", true);
 
-        animator.SetBool("isDeath", isDeath);
-
-        // Ignore collisions so it doesn’t collide horizontally
+        // Disable horizontal collisions so enemy doesn't get stuck
         Physics2D.IgnoreLayerCollision(enemyLayer, platformLayer, true);
         Physics2D.IgnoreLayerCollision(enemyLayer, borderLayer, true);
 
-        // Apply the BOUNCY MATERIAL
+        // Assign the bouncy material
         Collider2D col = GetComponent<Collider2D>();
         if (col != null)
         {
             col.sharedMaterial = deathMaterial;
         }
 
-        // Give it a vertical bounce impulse (optional)
+        // Allow ragdoll physics
         if (body != null)
         {
-            body.linearVelocity = new Vector2(0, 10f); // modify force if needed
-            body.gravityScale = 1; // ensure gravity works
+            body.gravityScale = 1;
+            // DO NOT reset velocity here — explosion pushes enemy!
         }
 
         Invoke("DestroyEnemy", deathDuration);
@@ -94,8 +105,24 @@ public class BasicEnemyMove : MonoBehaviour
 
     private void DestroyEnemy()
     {
-        SoundFXManager.instance.PlaySoundByName("block-destroy", gameObject.transform, 1f, 1f, false);
-        Instantiate(enemyDeatheffect, gameObject.transform.position, Quaternion.identity);
+        SoundFXManager.instance.PlaySoundByName("block-destroy", transform, 1f, 1f, false);
+        Instantiate(enemyDeatheffect, transform.position, Quaternion.identity);
+
+        int coinCount = Random.Range(minCoins, maxCoins + 1);
+
+        for (int i = 0; i < coinCount; i++)
+        {
+            GameObject coin = PoolManager.instance.Spawn("Coin", transform.position, Quaternion.identity);
+
+            Rigidbody2D rb = coin.GetComponent<Rigidbody2D>();
+            if (rb != null)
+            {
+                float angle = Random.Range(0f, 360f);
+                Vector2 dir = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
+                rb.AddForce(dir * coinSpawnForce, ForceMode2D.Impulse);
+            }
+        }
+
         Destroy(gameObject);
     }
 }

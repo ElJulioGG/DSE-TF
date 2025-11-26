@@ -56,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float flashInterval = 0.1f;
 
     [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private PhysicsMaterial2D noFrictionMaterial;
     private bool isInvulnerable = false;
 
 
@@ -146,7 +147,17 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
-
+    private void ChangeFricition()
+    {
+        if (IsOnGround() && horizontalInput == 0)
+        {
+            boxCollider.sharedMaterial = noFrictionMaterial;
+        }
+        else
+        {
+            boxCollider.sharedMaterial = null;
+        }
+    }
     private bool IsOnGround()
     {
         Vector2 boxSize = new Vector2(boxCollider.bounds.size.x * 0.6f, 0.1f);
@@ -253,8 +264,20 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Obstacle") && canTakeDamage)
         {
             TakeDamage();
+
+            BasicEnemyMove enemy = collision.gameObject.GetComponent<BasicEnemyMove>();
+            enemy.Death();
+
+            Rigidbody2D enemyRb = collision.rigidbody;
+            if (enemyRb != null)
+            {
+                // Apply random torque so the body spins
+                float randomTorque = Random.Range(-1f, 1f);
+                enemyRb.AddTorque(randomTorque, ForceMode2D.Impulse);
+            }
         }
     }
+
 
 
     private void TakeDamage()
