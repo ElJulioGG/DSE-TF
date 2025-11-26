@@ -16,6 +16,9 @@ public class PlayerMovement : MonoBehaviour
     [Tooltip("Linear drag applied when on the ground to help the player stop.")]
     [SerializeField] private float groundDrag = 6f;
 
+    [SerializeField] private LayerMask wallMask;
+
+
     [Header("Jump Settings")]
     [SerializeField] private float forceJump = 15f;
     [SerializeField] private int jumpsMax = 2;
@@ -58,6 +61,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private PhysicsMaterial2D noFrictionMaterial;
     private bool isInvulnerable = false;
+    [SerializeField] private bool grounded = true;
 
 
     private void Start()
@@ -101,6 +105,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        grounded = IsOnGround();
+
         if (isKnockedBack) return;
 
         // Read movement input here for zero lag
@@ -233,11 +239,13 @@ public class PlayerMovement : MonoBehaviour
         Vector2 origin = boxCollider.bounds.center;
         Vector2 size = new Vector2(0.1f, boxCollider.bounds.size.y * 0.9f);
 
-        bool leftHit = Physics2D.OverlapBox(origin + Vector2.left * skinWidth, size, 0f, MaskFloor);
-        bool rightHit = Physics2D.OverlapBox(origin + Vector2.right * skinWidth, size, 0f, MaskFloor);
+        bool leftHit = Physics2D.OverlapBox(origin + Vector2.left * skinWidth, size, 0f, wallMask);
+        bool rightHit = Physics2D.OverlapBox(origin + Vector2.right * skinWidth, size, 0f, wallMask);
 
         return (horizontalInput < 0 && leftHit) || (horizontalInput > 0 && rightHit);
     }
+
+
 
     private void GestionarOrientacion(float inputMovimiento)
     {
@@ -261,7 +269,7 @@ public class PlayerMovement : MonoBehaviour
     //}
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Obstacle") && canTakeDamage)
+        if (collision.gameObject.CompareTag("Enemy") && canTakeDamage)
         {
             TakeDamage();
 
@@ -275,6 +283,11 @@ public class PlayerMovement : MonoBehaviour
                 float randomTorque = Random.Range(-1f, 1f);
                 enemyRb.AddTorque(randomTorque, ForceMode2D.Impulse);
             }
+        }
+
+        if (collision.gameObject.CompareTag("Obstacle") && canTakeDamage)
+        {
+            TakeDamage();
         }
     }
 
