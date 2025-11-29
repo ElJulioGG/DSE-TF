@@ -42,17 +42,16 @@ public class Explosion : MonoBehaviour
 
             if (col.CompareTag("Enemy"))
             {
-                BasicEnemyMove enemy = col.GetComponent<BasicEnemyMove>();
-                col.attachedRigidbody.linearVelocity = Vector2.zero; // Cancel current velocity
-                enemy.Death();
-                
+                BasicEnemyMove enemy = col.GetComponent<BasicEnemyMove>();                
                 if (enemy != null) {
+                    col.attachedRigidbody.linearVelocity = Vector2.zero;
                     Debug.Log("Enemy hit by explosion");
                     enemy.Death();
                 }
 
                 SpikeEnemyMove spikeEnemy = col.GetComponent<SpikeEnemyMove>();
                 if (spikeEnemy != null && spikeEnemy.isAlmostDeath) {
+                    col.attachedRigidbody.linearVelocity = Vector2.zero;
                     Debug.Log("Spike Enemy hit by explosion");
                     spikeEnemy.Death();
 
@@ -64,14 +63,37 @@ public class Explosion : MonoBehaviour
 
                 NoisyEnemyMove noisyEnemy = col.GetComponent<NoisyEnemyMove>();
                 if (noisyEnemy != null) {
+                    col.attachedRigidbody.linearVelocity = Vector2.zero;
                     Debug.Log("Noisy Enemy hit by explosion");
                     noisyEnemy.Death();
                 }
 
                 RunnerEnemyMove runnerEnemy = col.GetComponent<RunnerEnemyMove>();
                 if (runnerEnemy != null) {
+                    col.attachedRigidbody.linearVelocity = Vector2.zero;
                     Debug.Log("Runner Enemy hit by explosion");
                     runnerEnemy.Death();
+                }
+
+                BatEnemyMove_RL batEnemy_1 = col.GetComponent<BatEnemyMove_RL>();
+                if (batEnemy_1 != null) {
+                    col.attachedRigidbody.linearVelocity = Vector2.zero;
+                    Debug.Log("Bat Enemy hit by explosion");
+                    batEnemy_1.Death();
+                }
+
+                BatEnemyMove_UD batEnemy_2 = col.GetComponent<BatEnemyMove_UD>();
+                if (batEnemy_2 != null) {
+                    col.attachedRigidbody.linearVelocity = Vector2.zero;
+                    Debug.Log("Bat Enemy hit by explosion");
+                    batEnemy_2.Death();
+                }
+
+                ToritoEnemyMove toritoEnemy = col.GetComponent<ToritoEnemyMove>();
+                if (toritoEnemy != null) {
+                    col.attachedRigidbody.linearVelocity = Vector2.zero;
+                    Debug.Log("Torito Enemy hit by explosion");
+                    toritoEnemy.Death();
                 }
 
                 Rigidbody2D enemyRb = col.attachedRigidbody;
