@@ -7,10 +7,12 @@ public class GameController : MonoBehaviour
     private bool lowHP = false;
     private bool oneHP = false;
     [SerializeField] private float musicVolume = 0.7f;
+    [SerializeField] public Transform playerSpawn;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     private void Awake()
     {
+        GameManager.instance.playerspawn = playerSpawn;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.None;
     }
@@ -19,6 +21,8 @@ public class GameController : MonoBehaviour
         SoundFXManager.instance.PlaySoundByName("bgm", gameObject.transform, musicVolume, 1f, true);
         GameManager.instance.playerDied = false;
         GameManager.instance.playerHP = startHP;
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        player.transform.position = playerSpawn.position;
     }
 
     // Update is called once per frame
