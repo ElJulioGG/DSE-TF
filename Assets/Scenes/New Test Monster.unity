@@ -22173,6 +22173,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 9f0dff05e5d879d4a97752aab2c99a9b, type: 3}
   - {fileID: 8300000, guid: 44e5e216decc54046a62baacfe85ad65, type: 3}
   - {fileID: 8300000, guid: 9a6913ff61992c1458e05bcf2154296c, type: 3}
+  - {fileID: 8300000, guid: 310cb0de29b60574b9fd47b78c10af08, type: 3}
+  defaultMaxInstancesPerClip: 6
 --- !u!4 &1051912925
 Transform:
   m_ObjectHideFlags: 0

@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] public bool weaponChange = true;
     [SerializeField] public int ducksCollected = 0;
     [SerializeField] public int coins = 0;
+    [SerializeField] public int doorIndex = 0;
     private void Awake()
     {
         if (instance == null)
