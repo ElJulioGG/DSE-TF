@@ -12,12 +12,14 @@ public class ButtonScene : MonoBehaviour
 
     private void Awake()
     {
+        SoundFXManager.instance.PlaySoundByName("menuMusic", transform, 1f, 1f, true);
         fadeCanvas = fadeImage.GetComponentInParent<Canvas>();
     }
 
     public void Start()
     {
         StartCoroutine(FadeOutScene());
+
     }
 
     private IEnumerator FadeOutScene()
@@ -44,6 +46,7 @@ public class ButtonScene : MonoBehaviour
 
     public void LoadScene(string sceneName)
     {
+        SoundFXManager.instance.StopSoundByName("menuMusic");
         StartCoroutine(FadeAndLoad(sceneName));
     }
 
