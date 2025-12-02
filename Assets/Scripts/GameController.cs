@@ -21,6 +21,14 @@ public class GameController : MonoBehaviour
 
         GameManager.instance.playerDied = false;
         GameManager.instance.playerHP = startHP;
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        player.transform.position = playerSpawn.position;
+=======
+        GameManager.instance.lastLevelSceneName = SceneManager.GetActiveScene().name;
+>>>>>>> Stashed changes
+=======
 
         GameObject player = GameObject.FindGameObjectWithTag("Player");
 
@@ -30,6 +38,7 @@ public class GameController : MonoBehaviour
             player.transform.position = GameManager.instance.playerspawn;
         }
         
+>>>>>>> 1ad302090f4f974e7efdf6d39f55a18c3036e688
     }
 
     void Update()
@@ -55,6 +64,21 @@ public class GameController : MonoBehaviour
             oneHP = false;
         }
 
+<<<<<<< HEAD
+        if (GameManager.instance.playerHP <= 0 && !GameManager.instance.playerDied)
+        {
+        // Marcar que ya murió para no ejecutar esto muchas veces
+            GameManager.instance.playerDied = true;
+
+        // Parar la música del nivel
+            SoundFXManager.instance.StopSoundByName("bgm");
+
+        // Ir a la escena de Game Over
+            SceneManager.LoadScene("GAMEOVER");
+        }
+
+        if (Input.GetKeyDown(KeyCode.R) && !GameManager.instance.playerDied)
+=======
         if (GameManager.instance.playerHP <= 0)
         {
             SoundFXManager.instance.StopSoundByName("bgm");
@@ -62,9 +86,11 @@ public class GameController : MonoBehaviour
         }
 
         if (Input.GetKeyDown(KeyCode.R))
+>>>>>>> 1ad302090f4f974e7efdf6d39f55a18c3036e688
         {
             SoundFXManager.instance.StopSoundByName("bgm");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+
     }
 }

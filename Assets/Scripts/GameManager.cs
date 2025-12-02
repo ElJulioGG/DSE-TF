@@ -14,8 +14,17 @@ public class GameManager : MonoBehaviour
     [SerializeField] public bool weaponChange = true;
     [SerializeField] public int ducksCollected = 0;
     [SerializeField] public int coins = 0;
+<<<<<<< Updated upstream
     [SerializeField] public int doorIndex = 0;
+<<<<<<< HEAD
+    [SerializeField] public Transform playerspawn;
+=======
+    [SerializeField] public string lastLevelSceneName = "LEVEL 1";
+
+>>>>>>> Stashed changes
+=======
     [SerializeField] public Vector3 playerspawn;
+>>>>>>> 1ad302090f4f974e7efdf6d39f55a18c3036e688
     private void Awake()
     {
         if (instance == null)
@@ -32,7 +41,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
