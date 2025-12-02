@@ -22,6 +22,7 @@ public class Coin : MonoBehaviour
 
     private void Start()
     {
+        Destroy(gameObject,20f);
         floorLayer = LayerMask.NameToLayer("Floor");
 
         // --- RANDOM STARTING TORQUE ---

@@ -22365,6 +22365,7 @@ MonoBehaviour:
   soundFXPrefab: {fileID: 0}
   soundFXClips:
   - {fileID: 0}
+  defaultMaxInstancesPerClip: 6
 --- !u!4 &1513777998
 Transform:
   m_ObjectHideFlags: 0
@@ -23008,6 +23009,8 @@ MonoBehaviour:
   weaponChange: 1
   ducksCollected: 0
   coins: 0
+  doorIndex: 0
+  playerspawn: {fileID: 0}
 --- !u!4 &1718031497
 Transform:
   m_ObjectHideFlags: 0

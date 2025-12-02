@@ -52,62 +52,54 @@ public class DoorTeleport : MonoBehaviour
     {
         estaTeletransportando = true;
 
-        // Bloquear input
         if (GameManager.instance != null)
             GameManager.instance.playerCanInput = false;
 
-        // Fade OUT
         if (usarFade && fadeCanvas != null)
             yield return StartCoroutine(Fade(1f));
 
         yield return new WaitForSeconds(tiempoAntesDeMover);
 
-        // -----------------------------------------
-        //        LÓGICA SAFE ROOM / NORMAL
-        // -----------------------------------------
-
         Transform destinoFinal = destino;
 
+        // ──────────────────────────────────────────────
+        // SAFE ROOM → buscar la puerta con el index guardado
+        // ──────────────────────────────────────────────
         if (safeRoomDoor)
         {
-            // TP a la última puerta usada
-            string doorName = "Door" + GameManager.instance.doorIndex;
-            GameObject puertaDestino = GameObject.Find(doorName);
+            int indexBuscado = GameManager.instance.doorIndex;
 
-            if (puertaDestino != null)
+            DoorTeleport[] todasLasPuertas = FindObjectsOfType<DoorTeleport>();
+
+            foreach (var puerta in todasLasPuertas)
             {
-                destinoFinal = puertaDestino.transform;
+                if (!puerta.safeRoomDoor && puerta.myDoorIndex == indexBuscado)
+                {
+                    destinoFinal = puerta.transform;
+                    break;
+                }
             }
-            else
-            {
-                Debug.LogWarning("SafeRoomDoor: No se encontró '" + doorName + "'");
-            }
+
+            if (destinoFinal == null)
+                Debug.LogWarning("SafeRoomDoor: No se encontró puerta con index " + indexBuscado);
         }
         else
         {
-            // PUERTA NORMAL → guardar este index como última puerta usada
+            // PUERTA NORMAL → actualizar index actual
             GameManager.instance.doorIndex = myDoorIndex;
         }
 
-        // Teletransporte
+        // Mover jugador
         if (destinoFinal != null)
-        {
             player.position = destinoFinal.position;
-        }
         else
-        {
             Debug.LogWarning("DoorTeleport: Destino final es null.");
-        }
-
-        // -----------------------------------------
 
         yield return new WaitForSeconds(tiempoOscuro);
 
-        // Fade IN
         if (usarFade && fadeCanvas != null)
             yield return StartCoroutine(Fade(0f));
 
-        // Activar input
         if (GameManager.instance != null)
             GameManager.instance.playerCanInput = true;
 
