@@ -18,7 +18,8 @@ public class Checkpoint : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            GameManager.instance.playerspawn = gameObject.transform;
+            GameManager.instance.playerspawn = gameObject.transform.position;
+            SoundFXManager.instance.PlaySoundByName("save", gameObject.transform, 0.5f, 1f, false);
         }
     }
 }
